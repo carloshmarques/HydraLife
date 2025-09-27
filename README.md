@@ -5,7 +5,7 @@
 <div align="center">
   <!-- Change your logo -->
   <a href="https://github.com/carloshmarques/HydraLife">
-    <img width="100%" src="https://i.imgur.com/SVvgxJF.png" alt="@carloshmarques/HydraLife's logo">
+    <img width="100%" src="https://imgur.com/rj1HPjW.png" alt="@carloshmarques/HydraLife's logo">
   </a>
   <br>
   <a href="https://github.com/carloshmarques/HydraLife/issues">
@@ -58,7 +58,7 @@
 
 <!-- Change your small logo -->
 <a href="https://github.com/carloshmarques/HydraLife">
-  <img alt="@carloshmarques/HydraLife's brand logo without text" align="right" src="https://i.imgur.com/3qK1sie.png" width="18%" />
+  <img alt="@carloshmarques/HydraLife's brand logo without text" align="right" src="https://imgur.com/kits5mj.png" width="18%" />
 </a>
 
 
