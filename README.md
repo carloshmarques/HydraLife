@@ -19,20 +19,26 @@
 ---
 
 ## 🤔 **About the project**
+ <!-- ... [WHY DID YOU CREATED THIS PROJECT?, MOTIVATION, PURPOSE, DESCRIPTION, OBJECTIVES, etc] -->
+##  HydraLife is a simulated OS interface designed to unify the fragmented systems of modern life — from finances to food, healthcare to housing. Inspired by the mythological Hydra and grounded in dialectical materialism, this project transforms complexity into clarity. It’s not an operating system. It’s a life system.
+* 🔥 What HydraLife communicates:
+* Resilience: Like the Hydra regenerating its heads, you’re building a system that adapts and grows with you.
 
-* <!-- ... [WHY DID YOU CREATED THIS PROJECT?, MOTIVATION, PURPOSE, DESCRIPTION, OBJECTIVES, etc] -->
+* Multiplicity with unity: You’re acknowledging life’s many moving parts, but refusing to let them stay fragmented.
 
+* Personal power: This isn’t just an app — it’s an extension of you. A digital reflection of your will to organize, overcome, and evolve.
 ---
 
 ## ⚡ **Installation**
+<!-- ... [SHOW HOW YOUR PROJECT IS INSTALLED] -->
 
-* <!-- ... [SHOW HOW YOUR PROJECT IS INSTALLED] -->
+* git clone or fork it, the cd on to it, and you will need Visual studio to .sln file. Edit to your spection, this app is meant to flexible, as created that way.
 
 ---
 
 ## 🚀 **Usage**
-
-* <!-- ... [SHOW HOW YOUR PROJECT IS USED] -->
+<!-- ... [SHOW HOW YOUR PROJECT IS USED] -->
+* Uses visual studio(2022)<img align="center" alt="visual studio" height="30" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /> at this moment, and <img align="center" alt=".Net" height="30" width="50" src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" />.net framework 4.8.
 
 ---
 
@@ -44,8 +50,8 @@
 ---
 
 ## 📝 **Additional notes**
-
-* <!-- ... [ADD ADDITIONAL NOTES] -->
+ <!-- ... [ADD ADDITIONAL NOTES] -->
+## This project was created in close colaboration with Microsoft Copilot(🤖), to who a leave special thanks and apreciation.
 
 ---
 
@@ -59,7 +65,7 @@
 
 <!-- Change your small logo -->
 <a href="https://github.com/carloshmarques/HydraLife">
-  <img alt="@carloshmarques/HydraLife's brand logo without text" align="right" src="https://imgur.com/kits5mj.png" width="18%" />
+  <img alt="@carloshmarques/HydraLife's brand logo without text" align="right" src="https://imgur.com/kits5mj.png" width="14%" />
 </a>
 
 
