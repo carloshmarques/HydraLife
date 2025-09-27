@@ -107,8 +107,6 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   │   ├── LifeCicles.pdb
 │   │   │   │   📁 TempPE/
 │   │   │   │   │   ├── Properties.Resources.Designer.cs.dll
-│   📁 bin/
-│   │   📁 Debug/
 │   📁 obj/
 │   │   📁 Debug/
 │   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
