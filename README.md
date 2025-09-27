@@ -50,8 +50,79 @@ open git bash on  a location of your chosing and type git clone https://github.c
 ## 🌲 **Project tree**
 
 <!-- ... [SHOW YOUR PROJECT TREE HERE IF USEFUL] -->
-<!--... [ PROJECT tree starts here] -->
-<!--... [ PROJECT tree ends here] -->
+<!-- Project tree starts here -->
+
+```
+├── CHANGELOG.md
+├── LICENSE
+📁 LifeCicles/
+│   ├── HydraLife.sln
+│   📁 LifeCicles/
+│   │   ├── App.config
+│   │   ├── Form1.Designer.cs
+│   │   ├── Form1.cs
+│   │   ├── Form1.resx
+│   │   ├── HydraLife.csproj
+│   │   ├── HydraLife.csproj.user
+│   │   ├── Program.cs
+│   │   📁 Properties/
+│   │   │   ├── AssemblyInfo.cs
+│   │   │   ├── Resources.Designer.cs
+│   │   │   ├── Resources.resx
+│   │   │   ├── Settings.Designer.cs
+│   │   │   ├── Settings.settings
+│   │   📁 Resources/
+│   │   │   ├── 25706.png
+│   │   │   ├── close.png
+│   │   │   ├── hydra.png
+│   │   │   ├── logout.png
+│   │   │   ├── power-button-off.png
+│   │   │   ├── power-on.png
+│   │   │   ├── reload.png
+│   │   │   ├── reset.png
+│   │   │   ├── switch.png
+│   │   │   ├── switch1.png
+│   │   📁 bin/
+│   │   │   📁 Debug/
+│   │   │   │   ├── LifeCicles.exe
+│   │   │   │   ├── LifeCicles.exe.config
+│   │   │   │   ├── LifeCicles.pdb
+│   │   📁 obj/
+│   │   │   📁 Debug/
+│   │   │   │   ├── DesignTimeResolveAssemblyReferences.cache
+│   │   │   │   ├── DesignTimeResolveAssemblyReferencesInput.cache
+│   │   │   │   ├── HydraLife.Form1.resources
+│   │   │   │   ├── HydraLife.csproj.AssemblyReference.cache
+│   │   │   │   ├── HydraLife.csproj.CoreCompileInputs.cache
+│   │   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
+│   │   │   │   ├── HydraLife.csproj.GenerateResource.cache
+│   │   │   │   ├── LifeCicles.Form1.resources
+│   │   │   │   ├── LifeCicles.Properties.Resources.resources
+│   │   │   │   ├── LifeCicles.csproj.AssemblyReference.cache
+│   │   │   │   ├── LifeCicles.csproj.CoreCompileInputs.cache
+│   │   │   │   ├── LifeCicles.csproj.FileListAbsolute.txt
+│   │   │   │   ├── LifeCicles.csproj.GenerateResource.cache
+│   │   │   │   ├── LifeCicles.exe
+│   │   │   │   ├── LifeCicles.exe.config
+│   │   │   │   ├── LifeCicles.pdb
+│   │   │   │   📁 TempPE/
+│   │   │   │   │   ├── Properties.Resources.Designer.cs.dll
+│   📁 bin/
+│   │   📁 Debug/
+│   📁 obj/
+│   │   📁 Debug/
+│   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
+├── README.md
+📁 Screenshots/
+│   ├── application_started.png
+│   ├── check_files_emulator.png
+│   ├── shuting_down.png
+│   ├── shuting_down2.png
+├── changelog_changes.py
+├── generate_tree.py
+```
+
+<!-- Project tree ends here -->
 ---
 
 ## 📝 **Additional notes**
