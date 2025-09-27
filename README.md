@@ -39,7 +39,8 @@
 ## 🌲 **Project tree**
 
 <!-- ... [SHOW YOUR PROJECT TREE HERE IF USEFUL] -->
-
+<!--... [ PROJECT tree starts here] -->
+<!--... [ PROJECT tree ends here] -->
 ---
 
 ## 📝 **Additional notes**
@@ -102,6 +103,8 @@ Enjoy! 😃
 See the license in the '**[LICENSE](LICENSE)**' file.
 
 Watch the changes in the '**[CHANGELOG.md](CHANGELOG.md)**' file.
+<!--... [ CHANGELOG changes starts here] -->
+<!--... [ CHANGELOG changes ends here] -->
 
 ---
 
