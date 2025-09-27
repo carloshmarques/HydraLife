@@ -1,0 +1,11 @@
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\bin\Debug\LifeCicles.exe.config
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\bin\Debug\LifeCicles.exe
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\bin\Debug\LifeCicles.pdb
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.csproj.AssemblyReference.cache
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.Form1.resources
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.Properties.Resources.resources
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.csproj.GenerateResource.cache
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.exe
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.pdb
+C:\Users\carlo\Desktop\LifeCicles\LifeCicles\obj\Debug\LifeCicles.exe.config
