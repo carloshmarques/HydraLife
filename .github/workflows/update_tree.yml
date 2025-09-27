@@ -1,0 +1,55 @@
+name: Update Project Tree
+on:
+  push:
+    branches:
+      - main
+      - master
+      
+  schedule:
+    # Run workflow automatically
+    - cron: '0 * * * *' # Runs every hour, on the hour
+  workflow_dispatch:
+    # Run workflow manually (without waiting for the cron to be called), through the GitHub Actions Workflow page directly
+permissions:
+  contents: write # To write the generated contents to the readme
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Cache pip          
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Run tree generator
+        run: |
+          pip install --upgrade pip
+          python generate_tree.py
+
+      - name: Push changes
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name 'carloshmarques'
+          git config --global user.email 'carlos.manuel.horta.marques@hotmail.com'
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/carloshmarques/HydraLife.git          
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update project tree"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+        continue-on-error: true
