@@ -63,10 +63,11 @@ open git bash on  a location of your chosing and type git clone https://github.c
 ## 📸 **Screenshots**
 
 <!-- ... [SOME DESCRIPTIVE IMAGES] -->
+## At this point in time we are currentely developing splah screen that mimics windows 8.1 bootloader and chekfile system linux style terminal output linux style also.
 ![HydraLife Load splah screen Screen](Screenshots/application_started.png)
 ![HydraLife Desktop](Screenshots/check_files_emulator.png)
 ![HydraLife Boot Screen](Screenshots/shuting_down.png)
-![HydraLife Desktop](Screenshots/shuting down2.png)
+![HydraLife Desktop](Screenshots/shuting_down2.png)
 
 ---
 
