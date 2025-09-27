@@ -65,3 +65,5 @@
 │   ├── shuting_down2.png
 ├── changelog_changes.py
 ├── generate_tree.py
+├── requirements.txt
+├── tree_text

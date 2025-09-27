@@ -120,6 +120,8 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   ├── shuting_down2.png
 ├── changelog_changes.py
 ├── generate_tree.py
+├── requirements.txt
+├── tree_text
 ```
 
 <!-- Project tree ends here -->
