@@ -32,13 +32,18 @@
 ## ⚡ **Installation**
 <!-- ... [SHOW HOW YOUR PROJECT IS INSTALLED] -->
 
-* git clone or fork it, the cd on to it, and you will need Visual studio to .sln file. Edit to your spection, this app is meant to flexible, as created that way.
+Clone or fork the repository, using git bash
+open git bash on  a location of your chosing and type git clone https://github.com/carloshmarques/HydraLife.git and edit readme.md with vscode or any other markdown editor.
 
 ---
 
 ## 🚀 **Usage**
 <!-- ... [SHOW HOW YOUR PROJECT IS USED] -->
-* Uses visual studio(2022)<img align="center" alt="visual studio" height="30" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /> at this moment, and <img align="center" alt=".Net" height="30" width="50" src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" />.net framework 4.8.
+* HydraLife currently runs on:
+- Visual Studio 2022 <img align="center" alt="visual studio" height="30" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" />
+- .NET Framework 4.8 <img align="center" alt=".net" height="30" width="50" src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" />
+
+* Open the .sln file using Visual Studio (2022 recommended). Customize the project to your needs — HydraLife is designed to be flexible and personal.
 
 ---
 
@@ -58,6 +63,10 @@
 ## 📸 **Screenshots**
 
 <!-- ... [SOME DESCRIPTIVE IMAGES] -->
+![HydraLife Load splah screen Screen](Screenshots/application_started.png)
+![HydraLife Desktop](Screenshots/check_files_emulator.png)
+![HydraLife Boot Screen](Screenshots/shuting_down.png)
+![HydraLife Desktop](Screenshots/shuting down2.png)
 
 ---
 
@@ -67,6 +76,13 @@
 <a href="https://github.com/carloshmarques/HydraLife">
   <img alt="@carloshmarques/HydraLife's brand logo without text" align="right" src="https://imgur.com/kits5mj.png" width="14%" />
 </a>
+
+### 🙌 Special Thanks
+- Microsoft Copilot 🤖 — for collaborative support and inspiration
+- Josee9988 — for the original project template
+
+Want to support HydraLife? Become a donor and get featured here!
+
 
 
 We are currently looking for new donators to help and maintain this project! ❤️
@@ -86,9 +102,8 @@ HydraLife was generated from *[Josee9988/project-template](https://github.com/Jo
 ---
 
 ## 🕵️ Extra recommendations
-
-* <!-- If you recommend installing anything special, or if you recommend using X thing for the good use of your project...-->
-
+ <!-- If you recommend installing anything special, or if you recommend using X thing for the good use of your project...-->
+* Uses visual studio(2022)<img align="center" alt="visual studio" height="30" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" /> at this moment, and <img align="center" alt=".net" height="30" width="50" src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" /> .net framework 4.8.
 ---
 
 ## 🎉 Was the "Organizer virtual OS style" helpful? Help us raise these numbers up
