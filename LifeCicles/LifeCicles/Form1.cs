@@ -4,17 +4,44 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace HydraLife
 {
+            // background colr transition stop working again -- to be fixed again
+        public partial class Form1 : Form
+        {
 
-    public partial class Form1 : Form
-    {
+        public static string HydraDataPath =>
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "HydraLife"
+                );
+
+        private int blendStepsValue = 60; // field
+       
+
+        public int BlendSteps { get; set; } // property
+
+        private string[] appDirectories = {
+        "Users",
+        "Users\\Admin",
+        "Files",
+        "Files\\Docs",
+        "Files\\Tunes",
+        "Files\\Photos",
+        "Files\\Downloads",
+        "Files\\Films"
+        };
+
+        private int dirIndex = 0;
+        private Timer directoryTimer;
+
         // Set the Date time
         private DateTime appStartTime;
 
@@ -30,12 +57,27 @@ namespace HydraLife
         // Spinner animation variables
         private string[] spinnerFrames = { "|", "/", "-", "\\" };
         private int spinnerIndex = 0;
-        private Timer spinnerTimer;
 
+        private Timer spinnerTimer;
         private int fileCheckIndex = 0;
         private string[] bootFiles = { "boot.sys", "kernel.img", "drivers.dll", "config.ini" };
 
+        private string[] spinnerShutDownFrames = { "|", "/", "-", "\\" };
+        private int spinnerShutDownFramesIndex = 0;
+        private Timer spinnerShutDownFramesTimer;
+
         private bool waitingForOk = false;
+
+        // smooth background color transitiom
+        private Timer colorBlendTimer;
+        private int blendStep;
+        private int blendSteps;
+        private Color startColor;
+        private Color endColor;
+
+
+
+
 
 
 
@@ -44,7 +86,27 @@ namespace HydraLife
         {
             InitializeComponent();
 
+            bootMessagesRtb.ReadOnly = true;
+            bootMessagesRtb.Enabled = true; // ✅ Keep it enabled to preserve BackColor
+            bootMessagesRtb.TabStop = false;
+            bootMessagesRtb.Cursor = Cursors.Default;
+            bootMessagesRtb.BackColor = this.BackColor; // Match form background
+            bootMessagesRtb.ForeColor = Color.LimeGreen; // Terminal-style text
+            bootMessagesRtb.ScrollBars = RichTextBoxScrollBars.None;
+            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+            bootMessagesRtb.ScrollToCaret(); // Optional: keeps newest line visible
+
+            // Iniatialize progress bar
+            progressBar1.Visible = false;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = appDirectories.Length;
+            progressBar1.Value = 0;
+
+
+
+
         }
+
         // Background color change variables
         private Color[] bgColors = new Color[]
         {
@@ -58,11 +120,26 @@ namespace HydraLife
         private int bgIndex = 0;
         private Timer bgTimer;
 
+        private bool showCursor = true;
+        private Timer cursorBlinkTimer;
+
         // Form load event
         private void Form1_Load(object sender, EventArgs e)
         {
+            cursorBlinkTimer = new Timer();
+            cursorBlinkTimer.Interval = 500; // blink every half second
+            cursorBlinkTimer.Tick += CursorBlinkTimer_Tick;
+            cursorBlinkTimer.Start();
 
-           // BgTimer_Tick(null, null); // Force one background change
+
+            // Iniatialize progress bar
+            progressBar1.Visible = false;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = appDirectories.Length;
+            progressBar1.Value = 0;
+
+
+
 
 
             // Hide the control buttons initially  on load
@@ -73,12 +150,7 @@ namespace HydraLife
             // set the app date time
             appStartTime = DateTime.Now;
 
-            // Set up the background color timer
-            bgTimer = new Timer();
-            bgTimer.Interval = 5000; // Change every 5 seconds
-            bgTimer.Tick += BgTimer_Tick;
-            bgTimer.Start();
-
+           
             // Set up the spinner timer
             spinnerTimer = new Timer();
             spinnerTimer.Interval = 500; // Speed of animation (500ms)
@@ -99,7 +171,7 @@ namespace HydraLife
             LifeCicles.Properties.Settings.Default.Save();
 
             // Show the button after 10 seconds
-            Task.Delay(10000).ContinueWith(_ =>
+            Task.Delay(5000).ContinueWith(_ =>
             {
                 this.Invoke((MethodInvoker)(() =>
                 {
@@ -108,7 +180,7 @@ namespace HydraLife
                     btnrestart.Visible = true;
 
                     // Optional: stop background animation and lock final state
-                    //bgTimer.Stop();
+                    bgTimer.Stop();
                     this.BackColor = Color.Black;
                     bootMessagesRtb.BackColor = Color.Black;
                     bootMessagesRtb.ForeColor = Color.LimeGreen;
@@ -117,41 +189,188 @@ namespace HydraLife
                     string spinner = spinnerFrames[spinnerIndex];
                     spinnerIndex = (spinnerIndex + 1) % spinnerFrames.Length;
 
-                    lblTimer.Text += $"\r\nLoad completed. Showing login screen... {spinner}";
+                    lblTimer.Text += $"\r\nLoad completed. Showing login screen... ";
+                    // ✅ Start directory creation sequence here
+                    directoryTimer = new Timer();
+                    directoryTimer.Interval = 1000; // 1 second per directory
+                    directoryTimer.Tick += DirectoryTimer_Tick;
+                    directoryTimer.Start();
                 }));
             });
 
 
 
         }
+        private void CursorBlinkTimer_Tick(object sender, EventArgs e)
+        {
+            showCursor = !showCursor;
+            string cursor = showCursor ? "|" : " ";
+            lblCursor.Text = cursor; // Use a Label at bottom of RichTextBox
+        }
+        private void StartDirectoryCheck()
+        {
+            directoryTimer = new Timer();
+            directoryTimer.Interval = 500; // adjust speed if needed
+            directoryTimer.Tick += DirectoryTimer_Tick;
+            directoryTimer.Start();
+        }
+
+        private void DirectoryTimer_Tick(object sender, EventArgs e)
+        {
+            if (dirIndex < appDirectories.Length)
+            {
+                progressBar1.Value = dirIndex + 1;
+
+                string fullPath = Path.Combine(HydraDataPath, appDirectories[dirIndex]);
+
+                try
+                {
+                    if (!Directory.Exists(fullPath))
+                    {
+                        Directory.CreateDirectory(fullPath);
+                        bootMessagesRtb.AppendText($"[{DateTime.Now:HH:mm:ss}] [OK] Created directory: {fullPath}\r\n");
+                        bootMessagesRtb.AppendText($"[OK] Created directory with success: Proceeding... {fullPath}\r\n");
+                        
+                        TriggerBackgroundFade(Color.FromArgb(0, 30, 0)); // 🟢 green for success
+                    }
+                    else
+                    {
+                        bool hasFiles = Directory.GetFiles(fullPath).Length > 0;
+                        bool hasSubDirs = Directory.GetDirectories(fullPath).Length > 0;
+
+                        if (hasFiles || hasSubDirs)
+                        {
+                            bootMessagesRtb.AppendText($"[SKIP] Directory already exists and is not empty. Skipping... {fullPath}\r\n");
+                            TriggerBackgroundFade(Color.FromArgb(30, 30, 0)); // 🟠 amber for skip
+                            
+
+                        }
+                        else
+                        {
+                            bootMessagesRtb.AppendText($"[OK] Directory exists but was empty. Continuing... {fullPath}\r\n");
+                            TriggerBackgroundFade(Color.FromArgb(0, 30, 30)); // 🔵 teal for empty but valid
+                        }
+                    }
+
+                    progressBar1.Value = dirIndex + 1;
+                    dirIndex++;
+                }
+                catch (Exception ex)
+                {
+                    bootMessagesRtb.AppendText($"[ERROR] Failed to process {fullPath}: {ex.Message}\r\n");
+                    TriggerBackgroundFade(Color.DarkRed); // 🔴 red for error
+                    dirIndex++;
+                }
+            }
+            else
+            {
+                bootMessagesRtb.AppendText("All directories initialized. System ready.\r\n");
+                TriggerBackgroundFade(Color.FromArgb(20, 20, 20)); // neutral tone
+                directoryTimer.Stop();
+            }
+
+            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+            //bootMessagesRtb.ScrollToCaret();
+        }
+
+
+
 
         // Spinner animation update
 
         private void SpinnerTimer_Tick(object sender, EventArgs e)
         {
-            // Code to match bootMessagesRtb background color with form background color
-            bootMessagesRtb.BackColor = this.BackColor;
-            // Get the current spinner frame
-            string spinner = spinnerFrames[spinnerIndex];
-            // Move to the next frame
-            spinnerIndex = (spinnerIndex + 1) % spinnerFrames.Length;
+            if (fileCheckIndex < bootFiles.Length)               
+            {
+                progressBar1.Value = dirIndex + 1;
+                string file = bootFiles[fileCheckIndex];
 
-            string message = $"Checking files and directories... {spinner}";
-            bootMessagesRtb.Text = message;           
+                if (!waitingForOk)
+                {
+                    bootMessagesRtb.AppendText($"Checking {file}...\r\n");
+                    TriggerBackgroundFade(Color.FromArgb(10, 10, 30)); // bluish tone for scanning
+                    waitingForOk = true;
+                }
+                else
+                {
+                    // Simulate error condition for specific files
+                    if (file.Contains("corrupt") || file == "boot.sys")
+                    {
+                        bootMessagesRtb.AppendText($"[ERROR] Failed to load {file}...\r\n");
+                        TriggerBackgroundFade(Color.DarkRed); // 🔴 dramatic red for failure
+                    }
+                    else
+                    {
+                        bootMessagesRtb.AppendText($"[OK] {file} loaded successfully...\r\n");
+                        TriggerBackgroundFade(Color.FromArgb(0, 30, 0)); // 🟢 dark green for success
+                   
+                    }
 
-            // Emulate boot file system check unix sys
-            string[] files = { "boot.sys", "kernel.img", "drivers.dll", "config.ini" };
-            // concatinate ' files '
-            // lblTimer.Text += $"Checking {files[spinnerIndex]}... {spinner}\r\n";
+                    fileCheckIndex++;
+                    waitingForOk = false;
+                }
 
+                bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                bootMessagesRtb.ScrollToCaret();
+            }
+            else
+            {
+                bootMessagesRtb.AppendText("System ready. Proceding to check app files and directories...\r\n");
+                TriggerBackgroundFade(Color.FromArgb(20, 20, 20)); // neutral tone
+                dirIndex = 0;
+                StartDirectoryCheck(); // ← this must be called
+
+                spinnerTimer.Stop();
+            }
         }
 
-        // Background color change update
-        private void BgTimer_Tick(object sender, EventArgs e)
+
+
+        private void TriggerBackgroundFade(Color targetColor)
         {
-            this.BackColor = bgColors[bgIndex];
-            bgIndex = (bgIndex + 1) % bgColors.Length;
+            startColor = this.BackColor;
+            endColor = targetColor;
+            blendStep = 0;
+            blendSteps = 60;
+
+            if (colorBlendTimer != null)
+            {
+                colorBlendTimer.Stop();
+                colorBlendTimer.Dispose();
+            }
+
+            colorBlendTimer = new Timer();
+            colorBlendTimer.Interval = 100;
+            colorBlendTimer.Tick += ColorBlendTimer_Tick;
+            colorBlendTimer.Start();
         }
+
+        private void ColorBlendTimer_Tick(object sender, EventArgs e)
+        {
+            if (blendStep <= blendSteps)
+            {
+                int r = startColor.R + (endColor.R - startColor.R) * blendStep / blendSteps;
+                int g = startColor.G + (endColor.G - startColor.G) * blendStep / blendSteps;
+                int b = startColor.B + (endColor.B - startColor.B) * blendStep / blendSteps;
+
+                // Clamp values to valid range [0, 255]
+                r = Math.Max(0, Math.Min(255, r));
+                g = Math.Max(0, Math.Min(255, g));
+                b = Math.Max(0, Math.Min(255, b));
+
+                Color blendedColor = Color.FromArgb(r, g, b);
+                this.BackColor = blendedColor;
+                bootMessagesRtb.BackColor = blendedColor;
+
+                blendStep++;
+            }
+            else
+            {
+                colorBlendTimer.Stop();
+                colorBlendTimer.Dispose();
+            }
+        }
+
 
         // Timer elapsed event handler
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -190,19 +409,14 @@ namespace HydraLife
 
                     if (!waitingForOk)
                     {
-                        lblTimer.Text += $"Checking {bootFiles[fileCheckIndex]}... {spinner}\r\n";
+                        lblTimer.Text += $"Checking {bootFiles[fileCheckIndex]}... \r\n";
                         waitingForOk = true; // Wait for next tick to show [OK]
                     }
                     else
                     {
-                        
-                        //lblTimer.Text += $"[OK]\r\n";
-                        /*
-                        Random rand = new Random();
-                        bool success = rand.Next(0, 10) > 1; // 90% chance of success  
-                        */
-                        // after write success "Sucees" instead of freazing in [Ok]!
-                       // lblTimer.Text += $"{success}\r\n";   // may be a string message = "Success!"
+
+                        lblTimer.Text += $"[OK]\r\n";
+                       
                         fileCheckIndex++;
                         waitingForOk = false;
                     }
@@ -221,37 +435,42 @@ namespace HydraLife
         // Button click event to close the application
         private void btnCloseApp_Click(object sender, EventArgs e)
         {
-            // Stop the spinner so it doesn't overwrite the shutdown message
-            //spinnerTimer.Stop();
-            // Get the current spinner frame
-            string spinner = spinnerFrames[spinnerIndex];         
-            spinnerIndex = (spinnerIndex + 1) % spinnerFrames.Length;
-            // Show shutdown message with spinner
-            // spinnerTimer.Start();
-            lblTimer.Text = $"Shutting down... {spinner}";
-            
+
+            // Stop background color changes
+            bgTimer?.Stop();
+
+            // Stop spinner updates
+            spinnerTimer?.Stop();
+
+            // Lock final background state
+            this.BackColor = Color.Black;
+            bootMessagesRtb.BackColor = Color.Black;
+            bootMessagesRtb.ForeColor = Color.LimeGreen;
+
+            // Show shutdown message
+            lblTimer.Text = $"Shutting down... ";
+
 
             // Let spinnerTimer keep running for animation
             Task.Delay(10000).ContinueWith(_ =>
             {
                 this.Invoke((MethodInvoker)(() =>
                 {
-                   // spinnerTimer.Stop(); // Stop right before killing the app
+                    // spinnerTimer.Stop(); // Stop right before killing the app
                     Process.GetCurrentProcess().Kill();
                 }));
             });
-
         }
-    }
 
-    // Custom RichTextBox with double buffering to reduce flicker
-    public class SmoothRichTextBox : RichTextBox
-    {
-        public SmoothRichTextBox()
+        // Custom RichTextBox with double buffering to reduce flicker
+        public class SmoothRichTextBox : RichTextBox
         {
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
+            public SmoothRichTextBox()
+            {
+                this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+                this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+                this.SetStyle(ControlStyles.UserPaint, true);
+            }
         }
     }
 }
