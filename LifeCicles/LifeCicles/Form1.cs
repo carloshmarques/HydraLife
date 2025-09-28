@@ -189,7 +189,7 @@ namespace HydraLife
                     string spinner = spinnerFrames[spinnerIndex];
                     spinnerIndex = (spinnerIndex + 1) % spinnerFrames.Length;
 
-                    lblTimer.Text += $"\r\nLoad completed. Showing login screen... ";
+                    lblTimer.Text += $"\r\nBoot completed. Showing login screen... ";
                     // ✅ Start directory creation sequence here
                     directoryTimer = new Timer();
                     directoryTimer.Interval = 1000; // 1 second per directory
@@ -270,7 +270,7 @@ namespace HydraLife
             }
 
             bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
-            //bootMessagesRtb.ScrollToCaret();
+            bootMessagesRtb.ScrollToCaret();
         }
 
 
@@ -448,8 +448,10 @@ namespace HydraLife
             bootMessagesRtb.ForeColor = Color.LimeGreen;
 
             // Show shutdown message
-            lblTimer.Text = $"Shutting down... ";
+            
 
+            Label1.Text = $"BIOS clock as received signal to shutdown ...\r\n";
+            // replace by this:    // Label1.Text = $"BIOs as received signal to sdown at: {startTimeFormatted}\r\n";  throws error must be fixed
 
             // Let spinnerTimer keep running for animation
             Task.Delay(10000).ContinueWith(_ =>
