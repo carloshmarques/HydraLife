@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,16 +77,18 @@ namespace HydraLife
         private Color endColor;
 
 
+        private bool directoriesFinalized = false;
 
 
 
 
-
+        private Color destColor = ColorTranslator.FromHtml("#2196F3"); // 💡 This is the fix
         // Constructor
         public Form1()
         {
-            InitializeComponent();
 
+            InitializeComponent();
+           
             bootMessagesRtb.ReadOnly = true;
             bootMessagesRtb.Enabled = true; // ✅ Keep it enabled to preserve BackColor
             bootMessagesRtb.TabStop = false;
@@ -122,10 +125,28 @@ namespace HydraLife
 
         private bool showCursor = true;
         private Timer cursorBlinkTimer;
+        private void BgTimer_Tick(object sender, EventArgs e)
+        {
+            // Example: fade background or animate something
+            this.BackColor = Color.FromArgb(
+                Math.Min(this.BackColor.R + 1, destColor.R),
+                Math.Min(this.BackColor.G + 1, destColor.G),
+                Math.Min(this.BackColor.B + 1, destColor.B)
+            );
+
+            // Optional: update a label or spinner
+            //label1.Text = "HydraLife is waking up...";
+        }
 
         // Form load event
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            bgTimer = new Timer();
+            bgTimer.Interval = 100;
+            bgTimer.Tick += BgTimer_Tick; // Make sure this method exists
+
+            bgTimer.Start();
             cursorBlinkTimer = new Timer();
             cursorBlinkTimer.Interval = 500; // blink every half second
             cursorBlinkTimer.Tick += CursorBlinkTimer_Tick;
@@ -214,6 +235,7 @@ namespace HydraLife
             directoryTimer.Tick += DirectoryTimer_Tick;
             directoryTimer.Start();
         }
+        private bool directoriesInitialized = false;
 
         private void DirectoryTimer_Tick(object sender, EventArgs e)
         {
@@ -262,15 +284,36 @@ namespace HydraLife
                     dirIndex++;
                 }
             }
-            else
+            else if (!directoriesFinalized)
             {
+                directoriesFinalized = true; // ✅ Prevent future triggers
                 bootMessagesRtb.AppendText("All directories initialized. System ready.\r\n");
                 TriggerBackgroundFade(Color.FromArgb(20, 20, 20)); // neutral tone
+
+                bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Launching HydraLife...\r\n");
+                TriggerBackgroundFade(Color.FromArgb(15, 15, 30)); // Deep blue for login
+
                 directoryTimer.Stop();
+
+                // ✨ Cinematic pause before showing buttons
+                Task.Delay(3000).ContinueWith(_ =>
+                {
+                    this.Invoke((MethodInvoker)(() =>
+                    {
+                        btnCloseApp.Visible = true;
+                        btnEndSession.Visible = true;
+                        btnrestart.Visible = true;
+
+                        // Optional: lock background animation
+                        bgTimer?.Stop();
+                    }));
+                });
             }
 
-            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
-            bootMessagesRtb.ScrollToCaret();
+
+
+
+
         }
 
 
