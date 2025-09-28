@@ -84,6 +84,10 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   ├── switch1.png
 │   │   📁 bin/
 │   │   │   📁 Debug/
+│   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   │   │   ├── DocumentFormat.OpenXml.dll
+│   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   ├── LifeCicles.exe
 │   │   │   │   ├── LifeCicles.exe.config
 │   │   │   │   ├── LifeCicles.pdb
@@ -96,6 +100,7 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   │   ├── HydraLife.csproj.CoreCompileInputs.cache
 │   │   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
 │   │   │   │   ├── HydraLife.csproj.GenerateResource.cache
+│   │   │   │   ├── HydraLife.csproj.Up2Date
 │   │   │   │   ├── LifeCicles.Form1.resources
 │   │   │   │   ├── LifeCicles.Properties.Resources.resources
 │   │   │   │   ├── LifeCicles.csproj.AssemblyReference.cache
@@ -107,9 +112,54 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   │   ├── LifeCicles.pdb
 │   │   │   │   📁 TempPE/
 │   │   │   │   │   ├── Properties.Resources.Designer.cs.dll
+│   │   ├── packages.config
 │   📁 obj/
 │   │   📁 Debug/
 │   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
+│   📁 packages/
+│   │   📁 DocumentFormat.OpenXml.3.3.0/
+│   │   │   ├── DocumentFormat.OpenXml.3.3.0.nupkg
+│   │   │   ├── README.md
+│   │   │   ├── icon.png
+│   │   │   📁 lib/
+│   │   │   │   📁 net35/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.xml
+│   │   │   │   📁 net40/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.xml
+│   │   │   │   📁 net46/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.xml
+│   │   │   │   📁 net8.0/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.xml
+│   │   │   │   📁 netstandard2.0/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.xml
+│   │   📁 DocumentFormat.OpenXml.Framework.3.3.0/
+│   │   │   ├── DocumentFormat.OpenXml.Framework.3.3.0.nupkg
+│   │   │   ├── README.md
+│   │   │   ├── icon.png
+│   │   │   📁 lib/
+│   │   │   │   📁 net35/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   │   │   📁 net40/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   │   │   📁 net46/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   │   │   📁 net6.0/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   │   │   📁 net8.0/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   │   │   📁 netstandard2.0/
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 ├── README.md
 📁 Screenshots/
 │   ├── application_started.png
