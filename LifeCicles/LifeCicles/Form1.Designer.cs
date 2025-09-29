@@ -34,20 +34,20 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnrestart = new System.Windows.Forms.Button();
-            this.btnEndSession = new System.Windows.Forms.Button();
-            this.btnCloseApp = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblTimer = new System.Windows.Forms.Label();
             this.bootMessagesRtb = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblCursor = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnrestart = new System.Windows.Forms.Button();
+            this.btnEndSession = new System.Windows.Forms.Button();
+            this.btnCloseApp = new System.Windows.Forms.Button();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Label1
@@ -81,49 +81,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(95, 1024);
             this.panel2.TabIndex = 8;
-            // 
-            // btnrestart
-            // 
-            this.btnrestart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnrestart.BackColor = System.Drawing.Color.Transparent;
-            this.btnrestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrestart.ForeColor = System.Drawing.Color.Blue;
-            this.btnrestart.Image = global::LifeCicles.Properties.Resources.reset;
-            this.btnrestart.Location = new System.Drawing.Point(27, 848);
-            this.btnrestart.Name = "btnrestart";
-            this.btnrestart.Size = new System.Drawing.Size(47, 47);
-            this.btnrestart.TabIndex = 4;
-            this.btnrestart.UseVisualStyleBackColor = false;
-            // 
-            // btnEndSession
-            // 
-            this.btnEndSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEndSession.BackColor = System.Drawing.Color.Transparent;
-            this.btnEndSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEndSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEndSession.ForeColor = System.Drawing.Color.Blue;
-            this.btnEndSession.Image = global::LifeCicles.Properties.Resources.logout;
-            this.btnEndSession.Location = new System.Drawing.Point(27, 788);
-            this.btnEndSession.Name = "btnEndSession";
-            this.btnEndSession.Size = new System.Drawing.Size(47, 47);
-            this.btnEndSession.TabIndex = 3;
-            this.btnEndSession.UseVisualStyleBackColor = false;
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseApp.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseApp.ForeColor = System.Drawing.Color.Blue;
-            this.btnCloseApp.Image = global::LifeCicles.Properties.Resources.power_on;
-            this.btnCloseApp.Location = new System.Drawing.Point(27, 910);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(47, 47);
-            this.btnCloseApp.TabIndex = 1;
-            this.btnCloseApp.UseVisualStyleBackColor = false;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // progressBar1
             // 
@@ -178,18 +135,6 @@
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 13;
             // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PictureBox2.Image = global::LifeCicles.Properties.Resources.hydra;
-            this.PictureBox2.Location = new System.Drawing.Point(412, 68);
-            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(300, 183);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.PictureBox2.TabIndex = 6;
-            this.PictureBox2.TabStop = false;
-            // 
             // lblCursor
             // 
             this.lblCursor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -227,6 +172,61 @@
             this.label3.Text = "BIOS Boot Sequence:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // btnrestart
+            // 
+            this.btnrestart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnrestart.BackColor = System.Drawing.Color.Transparent;
+            this.btnrestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnrestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrestart.ForeColor = System.Drawing.Color.Blue;
+            this.btnrestart.Image = global::LifeCicles.Properties.Resources.reset;
+            this.btnrestart.Location = new System.Drawing.Point(27, 848);
+            this.btnrestart.Name = "btnrestart";
+            this.btnrestart.Size = new System.Drawing.Size(47, 47);
+            this.btnrestart.TabIndex = 4;
+            this.btnrestart.UseVisualStyleBackColor = false;
+            // 
+            // btnEndSession
+            // 
+            this.btnEndSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEndSession.BackColor = System.Drawing.Color.Transparent;
+            this.btnEndSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEndSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEndSession.ForeColor = System.Drawing.Color.Blue;
+            this.btnEndSession.Image = global::LifeCicles.Properties.Resources.logout;
+            this.btnEndSession.Location = new System.Drawing.Point(27, 788);
+            this.btnEndSession.Name = "btnEndSession";
+            this.btnEndSession.Size = new System.Drawing.Size(47, 47);
+            this.btnEndSession.TabIndex = 3;
+            this.btnEndSession.UseVisualStyleBackColor = false;
+            // 
+            // btnCloseApp
+            // 
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseApp.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseApp.ForeColor = System.Drawing.Color.Blue;
+            this.btnCloseApp.Image = global::LifeCicles.Properties.Resources.power_on;
+            this.btnCloseApp.Location = new System.Drawing.Point(27, 910);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(47, 47);
+            this.btnCloseApp.TabIndex = 1;
+            this.btnCloseApp.UseVisualStyleBackColor = false;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureBox2.Image = global::LifeCicles.Properties.Resources.hydra;
+            this.PictureBox2.Location = new System.Drawing.Point(420, 0);
+            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(270, 264);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PictureBox2.TabIndex = 6;
+            this.PictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,9 +249,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

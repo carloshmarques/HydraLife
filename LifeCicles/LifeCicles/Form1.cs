@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -15,8 +16,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 
 namespace HydraLife
-{
-            // background colr transition stop working again -- to be fixed again
+{       
         public partial class Form1 : Form
         {
 
@@ -32,15 +32,92 @@ namespace HydraLife
 
         public int BlendSteps { get; set; } // property
 
+        private void InjectSystemDirectories()
+        {
+            string basePath = HydraDataPath;
+            //string basePath = @"C:\HydraLife";
+
+            string[] directories = new string[]
+            {
+            "App",
+            "App/Admin",
+            "App/Admin/Person/Credentials",
+            "App/Admin/Person/Credentials/Password",
+            "App/Admin/Person/Credentials/Username",
+            "App/Admin/Person/Credentials/Picture",
+            "App/Database/Temp/backups",
+                      
+            };
+
+            foreach (string dir in directories)
+            {
+                string fullPath = Path.Combine(basePath, dir);
+                Directory.CreateDirectory(fullPath);
+                bootMessagesRtb.AppendText($"[ OK ] Created: {fullPath}\n");
+            }
+
+            // Simula cópia de imagem de perfil
+            string sourceImage = @"C:\SomePath\face.jpg"; // Substituir pelo caminho real
+            string targetImage = Path.Combine(basePath, "usersettings/users/username/face/face.jpg");
+            if (File.Exists(sourceImage))
+            {
+                File.Copy(sourceImage, targetImage, true);
+                bootMessagesRtb.AppendText("[ OK ] User face image copied.\n");
+            }
+        }
+
+
+        // Inject Directories Method 
+
         private string[] appDirectories = {
-        "Users",
-        "Users\\Admin",
-        "Files",
-        "Files\\Docs",
-        "Files\\Tunes",
-        "Files\\Photos",
-        "Files\\Downloads",
-        "Files\\Films"
+
+            // redo project dir treee
+            // base dir
+        "App",
+        "App\\Admin",
+        "App\\Temp",
+        "App\\Admin\\Person",
+        "App\\Admin\\Settings",
+        "App\\Settings",
+        "App\\Shared",
+        "App\\Shared\\Documents",
+        "App\\Shared\\Music",
+        "App\\Shared\\Pictures",
+        "App\\Shared\\Downloads",
+        "App\\Shared\\Media",
+        "App\\Shared\\Temp",
+
+        // Database
+
+        "App\\Database",
+
+         // Account Manager
+
+        // Admin
+        "App\\Users",
+        "App\\Users\\Accounts",
+        "App\\Users\\Accounts\\Admin",     
+        "App\\Users\\Accounts\\Admin\\Profile\\Files",
+        "App\\Users\\Accounts\\Admin\\Profile\\Settings",
+        "App\\Users\\Accounts\\Admin\\Documents",
+        "App\\Users\\Accounts\\Admin\\Music",
+        "App\\Users\\Accounts\\Admin\\Pictures",
+        "App\\Users\\Accounts\\Admin\\Downloads",
+        "App\\Users\\Accounts\\Admin\\Media",
+
+        // default
+
+        "App\\Users\\Accounts\\Default",
+        "App\\Users\\Accounts\\Default\\Profile\\Files",     
+        "App\\Users\\Accounts\\Default\\Profile\\Settings",
+        "App\\Users\\Accounts\\Default\\Documents",
+        "App\\Users\\Accounts\\Default\\Music",
+        "App\\Users\\Accounts\\Default\\Pictures",
+        "App\\Users\\Accounts\\Default\\Downloads",
+        "App\\Users\\Accounts\\Default\\Media",
+
+        // Prep more  directories in the future here; // add your own logic here:
+
         };
 
 
@@ -79,10 +156,7 @@ namespace HydraLife
         private int blendSteps;
         private Color startColor;
         private Color endColor;
-
-
         private bool directoriesFinalized = false;
-
 
 
 
@@ -109,10 +183,6 @@ namespace HydraLife
             progressBar1.Minimum = 0;
             progressBar1.Maximum = appDirectories.Length;
             progressBar1.Value = 0;
-
-
-
-
         }
 
         // Background color change variables
@@ -134,21 +204,33 @@ namespace HydraLife
         {
             // Example: fade background or animate something
             this.BackColor = Color.FromArgb(
-                Math.Min(this.BackColor.R + 1, destColor.R),
-                Math.Min(this.BackColor.G + 1, destColor.G),
-                Math.Min(this.BackColor.B + 1, destColor.B)
-            );
+            Math.Min(this.BackColor.R + 1, destColor.R),
+            Math.Min(this.BackColor.G + 1, destColor.G),
+            Math.Min(this.BackColor.B + 1, destColor.B)
+         );
 
             // Optional: update a label or spinner
-            //label1.Text = "HydraLife is waking up...";
+            // lbl1.Text = "HydraLife is waking up...";
         }
 
         // Form load event
+
+        //    🧩 Finalizing Form1.cs — Complete Structure
+        //     1️-> Initial Setup in Form1_Load
         private void Form1_Load(object sender, EventArgs e)
         {
             startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
+            timer1.Start(); // Start progress
+            StartCursorBlink(); // Start the cursor blinking
+            InjectSystemDirectories(); // Create dummy directories
 
+            bootMessagesRtb.AppendText("[ Checking boot logs... ]\n");
+            bootMessagesRtb.AppendText("[ Boot logs verified successfully. ]\n");
+            bootMessagesRtb.AppendText("[ Checking file and directory integrity... ]\n");
+            bootMessagesRtb.AppendText("[ Integrity check complete. No missing files or directories. ]\n");
+
+        
             bgTimer = new Timer();
             bgTimer.Interval = 100;
             bgTimer.Tick += BgTimer_Tick; // Make sure this method exists
@@ -166,10 +248,6 @@ namespace HydraLife
             progressBar1.Maximum = appDirectories.Length;
             progressBar1.Value = 0;
 
-
-
-
-
             // Hide the control buttons initially  on load
             btnCloseApp.Visible = false;
             btnEndSession.Visible = false;
@@ -177,8 +255,7 @@ namespace HydraLife
 
             // set the app date time
             appStartTime = DateTime.Now;
-
-           
+            
             // Set up the spinner timer
             spinnerTimer = new Timer();
             spinnerTimer.Interval = 500; // Speed of animation (500ms)
@@ -226,13 +303,64 @@ namespace HydraLife
                 }));
             });
 
-
-
         }
+        // 2️ Timer for ProgressBar + Cinematic Logs + Percentage
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Increment(10);
+            int percent = progressBar1.Value;
+            lblTimer.Text = $"Boot progress: {percent}%";
+
+            switch (percent)
+            {
+                case 30:
+                    bootMessagesRtb.AppendText("[ Verifying system integrity... ]\n");
+                    break;
+                case 60:
+                    bootMessagesRtb.AppendText("[ Launching core services... ]\n");
+                    break;
+                case 90:
+                    bootMessagesRtb.AppendText("[ Finalizing boot sequence... ]\n");
+                    break;
+            }
+
+            if (percent >= 100)
+            {
+                timer1.Stop();
+                bootMessagesRtb.AppendText("[ Boot complete. Redirecting to login... ]\n");
+
+                // LoginForm login = new LoginForm();
+                // login.Show();
+                // this.Hide();
+            }
+        }
+        // 3️⃣ Blinking Cursor in Virtual Terminal
+
+        // private Timer cursorBlinkTimer;
+        // private bool showCursor = true;
+
+        private void StartCursorBlink()
+        {
+            cursorBlinkTimer = new Timer();
+            cursorBlinkTimer.Interval = 500;
+            cursorBlinkTimer.Tick += CursorBlinkTimer_Ticking;
+            cursorBlinkTimer.Start();
+        }
+
+        private void CursorBlinkTimer_Ticking(object sender, EventArgs e)
+        {
+            showCursor = !showCursor;
+            string cursorChar = showCursor ? "_" : " ";
+            bootMessagesRtb.AppendText(cursorChar);
+        }
+
+        // End Blinking Cursor in Virtual Terminal
+        
+
         private void CursorBlinkTimer_Tick(object sender, EventArgs e)
         {
             showCursor = !showCursor;
-            string cursor = showCursor ? "|" : " ";
+            string cursor = showCursor ? "_" : " ";
             lblCursor.Text = cursor; // Use a Label at bottom of RichTextBox
         }
         private void StartDirectoryCheck()

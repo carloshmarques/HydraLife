@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|c:\\users\\carlo\\source\\repos\\hydralife\\lifecicles\\lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|c:\\users\\carlo\\source\\repos\\hydralife\\lifecicles\\lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\lifecicles\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\Form1.cs",
               "RelativeDocumentMoniker": "LifeCicles\\Form1.cs",
@@ -74,16 +74,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\Form1.cs",
               "RelativeDocumentMoniker": "LifeCicles\\Form1.cs",
               "ToolTip": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\Form1.cs",
               "RelativeToolTip": "LifeCicles\\Form1.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAkwJAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAswHkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T10:33:11.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T10:33:11.414Z"
             }
           ]
         }
