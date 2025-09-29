@@ -75,6 +75,7 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   ├── 25706.png
 │   │   │   ├── close.png
 │   │   │   ├── hydra.png
+│   │   │   ├── img.png
 │   │   │   ├── logout.png
 │   │   │   ├── power-button-off.png
 │   │   │   ├── power-on.png
