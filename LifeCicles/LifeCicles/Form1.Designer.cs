@@ -54,12 +54,12 @@
             // 
             this.Label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.Label1.Location = new System.Drawing.Point(83, 154);
+            this.Label1.Location = new System.Drawing.Point(80, 157);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(769, 28);
+            this.Label1.Size = new System.Drawing.Size(889, 28);
             this.Label1.TabIndex = 4;
             this.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
@@ -77,7 +77,7 @@
             this.panel2.Controls.Add(this.btnEndSession);
             this.panel2.Controls.Add(this.btnCloseApp);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(985, 0);
+            this.panel2.Location = new System.Drawing.Point(998, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(95, 1024);
             this.panel2.TabIndex = 8;
@@ -90,7 +90,7 @@
             this.btnrestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnrestart.ForeColor = System.Drawing.Color.Blue;
             this.btnrestart.Image = global::LifeCicles.Properties.Resources.reset;
-            this.btnrestart.Location = new System.Drawing.Point(23, 888);
+            this.btnrestart.Location = new System.Drawing.Point(27, 848);
             this.btnrestart.Name = "btnrestart";
             this.btnrestart.Size = new System.Drawing.Size(47, 47);
             this.btnrestart.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.btnEndSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEndSession.ForeColor = System.Drawing.Color.Blue;
             this.btnEndSession.Image = global::LifeCicles.Properties.Resources.logout;
-            this.btnEndSession.Location = new System.Drawing.Point(23, 828);
+            this.btnEndSession.Location = new System.Drawing.Point(27, 788);
             this.btnEndSession.Name = "btnEndSession";
             this.btnEndSession.Size = new System.Drawing.Size(47, 47);
             this.btnEndSession.TabIndex = 3;
@@ -118,7 +118,7 @@
             this.btnCloseApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseApp.ForeColor = System.Drawing.Color.Blue;
             this.btnCloseApp.Image = global::LifeCicles.Properties.Resources.power_on;
-            this.btnCloseApp.Location = new System.Drawing.Point(23, 950);
+            this.btnCloseApp.Location = new System.Drawing.Point(27, 910);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(47, 47);
             this.btnCloseApp.TabIndex = 1;
@@ -131,7 +131,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.Location = new System.Drawing.Point(191, 68);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(721, 23);
+            this.progressBar1.Size = new System.Drawing.Size(734, 23);
             this.progressBar1.TabIndex = 9;
             this.progressBar1.Visible = false;
             // 
@@ -160,7 +160,7 @@
             this.bootMessagesRtb.Location = new System.Drawing.Point(191, 314);
             this.bootMessagesRtb.Name = "bootMessagesRtb";
             this.bootMessagesRtb.ReadOnly = true;
-            this.bootMessagesRtb.Size = new System.Drawing.Size(721, 433);
+            this.bootMessagesRtb.Size = new System.Drawing.Size(731, 479);
             this.bootMessagesRtb.TabIndex = 12;
             this.bootMessagesRtb.Text = "";
             this.bootMessagesRtb.TextChanged += new System.EventHandler(this.bootMessagesRtb_TextChanged);
@@ -185,7 +185,7 @@
             this.PictureBox2.Location = new System.Drawing.Point(412, 68);
             this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(287, 183);
+            this.PictureBox2.Size = new System.Drawing.Size(300, 183);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PictureBox2.TabIndex = 6;
             this.PictureBox2.TabStop = false;
@@ -196,7 +196,7 @@
             this.lblCursor.AutoSize = true;
             this.lblCursor.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCursor.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblCursor.Location = new System.Drawing.Point(909, 740);
+            this.lblCursor.Location = new System.Drawing.Point(922, 763);
             this.lblCursor.Name = "lblCursor";
             this.lblCursor.Size = new System.Drawing.Size(0, 20);
             this.lblCursor.TabIndex = 14;
@@ -232,14 +232,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1080, 1024);
+            this.ClientSize = new System.Drawing.Size(1093, 1024);
             this.Controls.Add(this.lblCursor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PictureBox2);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.bootMessagesRtb);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.bootMessagesRtb);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

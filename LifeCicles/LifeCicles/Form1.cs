@@ -11,6 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 
 namespace HydraLife
@@ -18,6 +19,8 @@ namespace HydraLife
             // background colr transition stop working again -- to be fixed again
         public partial class Form1 : Form
         {
+
+        private string startTimeFormatted; // ✅ Only here
 
         public static string HydraDataPath =>
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
@@ -39,6 +42,7 @@ namespace HydraLife
         "Files\\Downloads",
         "Files\\Films"
         };
+
 
         private int dirIndex = 0;
         private Timer directoryTimer;
@@ -95,6 +99,7 @@ namespace HydraLife
             bootMessagesRtb.Cursor = Cursors.Default;
             bootMessagesRtb.BackColor = this.BackColor; // Match form background
             bootMessagesRtb.ForeColor = Color.LimeGreen; // Terminal-style text
+            bootMessagesRtb.Font = new Font("Consolas", 10, FontStyle.Bold);
             bootMessagesRtb.ScrollBars = RichTextBoxScrollBars.None;
             bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
             bootMessagesRtb.ScrollToCaret(); // Optional: keeps newest line visible
@@ -141,6 +146,8 @@ namespace HydraLife
         // Form load event
         private void Form1_Load(object sender, EventArgs e)
         {
+            startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
 
             bgTimer = new Timer();
             bgTimer.Interval = 100;
@@ -269,7 +276,7 @@ namespace HydraLife
                         }
                         else
                         {
-                            bootMessagesRtb.AppendText($"[OK] Directory exists but was empty. Continuing... {fullPath}\r\n");
+                            bootMessagesRtb.AppendText($"[OK] Directory exists but was empty. Proceding... {fullPath}\r\n");
                             TriggerBackgroundFade(Color.FromArgb(0, 30, 30)); // 🔵 teal for empty but valid
                         }
                     }
@@ -279,7 +286,7 @@ namespace HydraLife
                 }
                 catch (Exception ex)
                 {
-                    bootMessagesRtb.AppendText($"[ERROR] Failed to process {fullPath}: {ex.Message}\r\n");
+                    bootMessagesRtb.AppendText($"[ERROR] Failed to process {fullPath}, aborting: {ex.Message}\r\n");
                     TriggerBackgroundFade(Color.DarkRed); // 🔴 red for error
                     dirIndex++;
                 }
@@ -386,6 +393,9 @@ namespace HydraLife
             colorBlendTimer.Interval = 100;
             colorBlendTimer.Tick += ColorBlendTimer_Tick;
             colorBlendTimer.Start();
+            Console.WriteLine($"Current: {BackColor.R},{BackColor.G},{BackColor.B} → Target: {targetColor.R},{targetColor.G},{targetColor.B}");
+
+
         }
 
         private void ColorBlendTimer_Tick(object sender, EventArgs e)
@@ -404,12 +414,16 @@ namespace HydraLife
                 Color blendedColor = Color.FromArgb(r, g, b);
                 this.BackColor = blendedColor;
                 bootMessagesRtb.BackColor = blendedColor;
-
                 blendStep++;
+
+
             }
             else
             {
+
                 colorBlendTimer.Stop();
+                Console.WriteLine("Background fade complete.");
+                //colorBlendTimer.Stop();
                 colorBlendTimer.Dispose();
             }
         }
@@ -491,9 +505,10 @@ namespace HydraLife
             bootMessagesRtb.ForeColor = Color.LimeGreen;
 
             // Show shutdown message
-            
 
-            Label1.Text = $"BIOS clock as received signal to shutdown ...\r\n";
+            Label1.Text = $"BIOS has received signal to shutdown at: {startTimeFormatted}\r\n";
+
+            //Label1.Text = $"BIOS clock as received signal to shutdown,.. system is shuting down now at:...\r\n";
             // replace by this:    // Label1.Text = $"BIOs as received signal to sdown at: {startTimeFormatted}\r\n";  throws error must be fixed
 
             // Let spinnerTimer keep running for animation
