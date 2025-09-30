@@ -401,8 +401,8 @@ namespace HydraLife
         private void CursorBlinkTimer_Ticking(object sender, EventArgs e)
         {
             showCursor = !showCursor;
-            string cursorChar = showCursor ? "_" : " ";
-            bootMessagesRtb.AppendText(cursorChar);
+            lblCursor.Text = showCursor ? "_" : " ";
+            
         }
 
         // End Blinking Cursor in Virtual Terminal
@@ -497,13 +497,22 @@ namespace HydraLife
                 bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Lauching HydraLife System...\r\n");
                 
                 lblCursor.Text = $"Boot Completed... ";
+
                 bootMessagesRtb.AppendText("[ OK ] Bye...\n");
 
-                //StartCursorBlink.stop();  tried to make vitul blinlacorsor"_) stop showing when;
-                //  bootMessagesRtb.AppendText("[ OK ] Bye...\n"); show 
-                // this to stop.
-                //  Timer must be stopped
-                // 
+                Task.Delay(1000).ContinueWith(t =>
+                {
+                    this.Invoke((Action)(() =>
+                    {
+                        cursorBlinkTimer.Stop();
+                        lblCursor.Text = "_"; // Mantém o cursor visível
+                    }));
+                });
+
+
+
+
+
                 bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
                 bootMessagesRtb.ScrollToCaret();
 
