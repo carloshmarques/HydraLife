@@ -180,13 +180,15 @@ namespace HydraLife
 
 
 
-        private Color destColor = ColorTranslator.FromHtml("#2196F3"); // 💡 This is the fix
+        private Color destColor = Color.FromArgb(0, 120, 215); // Windows blue 
         // Constructor
         public Form1()
         {
 
             InitializeComponent();
-           
+            this.BackColor = Color.FromArgb(0, 0, 64); // Azul escuro elegante
+            bootMessagesRtb.BackColor = this.BackColor; // Igual ao fundo do Form
+            
             bootMessagesRtb.ReadOnly = true;
             bootMessagesRtb.Enabled = true; // ✅ Keep it enabled to preserve BackColor
             bootMessagesRtb.TabStop = false;
@@ -240,7 +242,16 @@ namespace HydraLife
         private void Form1_Load(object sender, EventArgs e)
         {
             startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            TriggerBackgroundFade(ColorTranslator.FromHtml("#2196F3"));
 
+            Task.Delay(3000).ContinueWith(_ =>
+            {
+                this.Invoke((MethodInvoker)(() =>
+                {
+                    StartDirectoryCheck(); // ✅ Este é o verdadeiro “StartBootSequence”
+                   
+                }));
+            });
             timer1.Start(); // Start progress
             StartCursorBlink(); // Start the cursor blinking
             StartCursorBlink();
@@ -644,16 +655,26 @@ namespace HydraLife
                 this.BackColor = blendedColor;
                 bootMessagesRtb.BackColor = blendedColor;
                 blendStep++;
-
-
             }
             else
             {
-
                 colorBlendTimer.Stop();
-                Console.WriteLine("Background fade complete.");
-                //colorBlendTimer.Stop();
                 colorBlendTimer.Dispose();
+
+                this.BackColor = endColor;
+                bootMessagesRtb.BackColor = endColor;
+
+                if (endColor == Color.Black)
+                {
+                    bootMessagesRtb.AppendText("\n[ SYSTEM ] Shutdown complete.\n");
+                    bootMessagesRtb.Cursor = Cursors.No;
+                }
+                else
+                {
+                    StartDirectoryCheck();
+                }
+
+                Console.WriteLine($"Background fade complete → Final: {endColor.R},{endColor.G},{endColor.B}");
             }
         }
 
@@ -736,6 +757,9 @@ namespace HydraLife
             // Show shutdown message
 
             Label1.Text = $"BIOS has received signal to shutdown at: {startTimeFormatted}\r\n";
+            
+
+
 
             //Label1.Text = $"BIOS clock as received signal to shutdown,.. system is shuting down now at:...\r\n";
             // replace by this:    // Label1.Text = $"BIOs as received signal to sdown at: {startTimeFormatted}\r\n";  throws error must be fixed
@@ -743,9 +767,12 @@ namespace HydraLife
             // Let spinnerTimer keep running for animation
             Task.Delay(10000).ContinueWith(_ =>
             {
+
+                
                 this.Invoke((MethodInvoker)(() =>
                 {
-                    // spinnerTimer.Stop(); // Stop right before killing the app
+                    
+                    spinnerTimer.Stop(); // Stop right before killing the app
                     Process.GetCurrentProcess().Kill();
                 }));
             });
