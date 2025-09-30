@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -377,9 +378,11 @@ namespace HydraLife
                 bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
                 bootMessagesRtb.ScrollToCaret();
 
-                // LoginForm login = new LoginForm();
-                // login.Show();
-                // this.Hide();
+                /*
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+                */
             }
         }
         // 3️⃣ Blinking Cursor in Virtual Terminal
@@ -491,9 +494,20 @@ namespace HydraLife
                 bootMessagesRtb.ScrollToCaret();
                 TriggerBackgroundFade(Color.FromArgb(20, 20, 20)); // neutral tone
 
-                bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Showing Login...\r\n");
-                lblCursor.Text = "Boot Completed...";
-          
+                bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Lauching HydraLife System...\r\n");
+                
+                lblCursor.Text = $"Boot Completed... ";
+                bootMessagesRtb.AppendText("[ OK ] Bye...\n");
+
+                //StartCursorBlink.stop();  tried to make vitul blinlacorsor"_) stop showing when;
+                //  bootMessagesRtb.AppendText("[ OK ] Bye...\n"); show 
+                // this to stop.
+                //  Timer must be stopped
+                // 
+                bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                bootMessagesRtb.ScrollToCaret();
+
+
                 TriggerBackgroundFade(Color.FromArgb(15, 15, 30)); // Deep blue for login
 
                 directoryTimer.Stop();

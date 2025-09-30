@@ -59,7 +59,7 @@
             this.Label1.Location = new System.Drawing.Point(80, 157);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(889, 28);
+            this.Label1.Size = new System.Drawing.Size(893, 28);
             this.Label1.TabIndex = 4;
             this.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
@@ -173,7 +173,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label2.Location = new System.Drawing.Point(321, 22);
+            this.label2.Location = new System.Drawing.Point(325, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 13;
@@ -184,7 +184,7 @@
             this.lblCursor.AutoSize = true;
             this.lblCursor.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCursor.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblCursor.Location = new System.Drawing.Point(922, 763);
+            this.lblCursor.Location = new System.Drawing.Point(905, 716);
             this.lblCursor.Name = "lblCursor";
             this.lblCursor.Size = new System.Drawing.Size(0, 20);
             this.lblCursor.TabIndex = 14;
@@ -199,7 +199,7 @@
             this.panel3.Controls.Add(this.lblTimer);
             this.panel3.Location = new System.Drawing.Point(111, 815);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(877, 209);
+            this.panel3.Size = new System.Drawing.Size(881, 209);
             this.panel3.TabIndex = 15;
             // 
             // label3
@@ -238,8 +238,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PictureBox2);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.bootMessagesRtb);
+            this.Controls.Add(this.panel3);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
