@@ -18,6 +18,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 namespace HydraLife
 {       
         public partial class Form1 : Form
+
         {
 
         private string startTimeFormatted; // ✅ Only here
@@ -28,11 +29,13 @@ namespace HydraLife
                 );
 
         private int blendStepsValue = 60; // field
+
        
 
         public int BlendSteps { get; set; } // property
 
         private void InjectSystemDirectories()
+
         {
             string basePath = HydraDataPath;
             //string basePath = @"C:\HydraLife";
@@ -45,8 +48,7 @@ namespace HydraLife
             "App/Admin/Person/Credentials/Password",
             "App/Admin/Person/Credentials/Username",
             "App/Admin/Person/Credentials/Picture",
-            "App/Database/Temp/backups",
-                      
+
             };
 
             foreach (string dir in directories)
@@ -54,6 +56,9 @@ namespace HydraLife
                 string fullPath = Path.Combine(basePath, dir);
                 Directory.CreateDirectory(fullPath);
                 bootMessagesRtb.AppendText($"[ OK ] Created: {fullPath}\n");
+                bootMessagesRtb.AppendText("[ Proceding ]: ...\n");
+                bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                bootMessagesRtb.ScrollToCaret();
             }
 
             // Simula cópia de imagem de perfil
@@ -63,6 +68,9 @@ namespace HydraLife
             {
                 File.Copy(sourceImage, targetImage, true);
                 bootMessagesRtb.AppendText("[ OK ] User face image copied.\n");
+                bootMessagesRtb.AppendText("[ OK ] Created: ...\n");
+                bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                bootMessagesRtb.ScrollToCaret();
             }
         }
 
@@ -74,12 +82,18 @@ namespace HydraLife
             // redo project dir treee
             // base dir
         "App",
-        "App\\Admin",
         "App\\Temp",
+        "App\\Admin",
+        "App\\Shared",
+        "App\\Settings",
+        "App\\Settings\\Backups",
+        "App\\Settings\\Backups\\Recovery",
+        "App\\Settings\\Backups\\Recovery\\Events",
+        "App\\Settings\\Backups\\Recovery\\Events\\Logs",
+
         "App\\Admin\\Person",
         "App\\Admin\\Settings",
-        "App\\Settings",
-        "App\\Shared",
+        
         "App\\Shared\\Documents",
         "App\\Shared\\Music",
         "App\\Shared\\Pictures",
@@ -90,6 +104,11 @@ namespace HydraLife
         // Database
 
         "App\\Database",
+        "App\\Database\\Logs",
+        "App\\Database\\Temp\\Backups",
+        "App\\Database\\Temp\\Backups\\Recovery",
+        "App\\Database\\Temp\\Backups\\Recovery\\Logs",
+        "App\\Database\\Temp\\Backups\\Recovery\\SnapShots",
 
          // Account Manager
 
@@ -137,14 +156,14 @@ namespace HydraLife
 
 
         // Spinner animation variables
-        private string[] spinnerFrames = { "|", "/", "-", "\\" };
+        private string[] spinnerFrames = { "|", "/", "-", " / " };
         private int spinnerIndex = 0;
 
         private Timer spinnerTimer;
         private int fileCheckIndex = 0;
         private string[] bootFiles = { "boot.sys", "kernel.img", "drivers.dll", "config.ini" };
 
-        private string[] spinnerShutDownFrames = { "|", "/", "-", "\\" };
+        private string[] spinnerShutDownFrames = { "|" , "/", "-", "/"};
         private int spinnerShutDownFramesIndex = 0;
         private Timer spinnerShutDownFramesTimer;
 
@@ -223,14 +242,31 @@ namespace HydraLife
 
             timer1.Start(); // Start progress
             StartCursorBlink(); // Start the cursor blinking
-            InjectSystemDirectories(); // Create dummy directories
+            StartCursorBlink();
+            InjectSystemDirectories();
+            //EnsureAdminAccount();
+            //CopyAdminImageFromResources(); // ← aqui
+            StartDirectoryCheck();
+
 
             bootMessagesRtb.AppendText("[ Checking boot logs... ]\n");
-            bootMessagesRtb.AppendText("[ Boot logs verified successfully. ]\n");
+            bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+            bootMessagesRtb.ScrollToCaret();
+            bootMessagesRtb.AppendText("[ Boot logs verified successfully. ]\n");          
+            bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+            bootMessagesRtb.ScrollToCaret();
             bootMessagesRtb.AppendText("[ Checking file and directory integrity... ]\n");
+            bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+            bootMessagesRtb.ScrollToCaret();
             bootMessagesRtb.AppendText("[ Integrity check complete. No missing files or directories. ]\n");
+            bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+            bootMessagesRtb.ScrollToCaret();
 
-        
+
             bgTimer = new Timer();
             bgTimer.Interval = 100;
             bgTimer.Tick += BgTimer_Tick; // Make sure this method exists
@@ -315,12 +351,21 @@ namespace HydraLife
             {
                 case 30:
                     bootMessagesRtb.AppendText("[ Verifying system integrity... ]\n");
+                    bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                    bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                    bootMessagesRtb.ScrollToCaret();
                     break;
                 case 60:
                     bootMessagesRtb.AppendText("[ Launching core services... ]\n");
+                    bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                    bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                    bootMessagesRtb.ScrollToCaret();
                     break;
                 case 90:
                     bootMessagesRtb.AppendText("[ Finalizing boot sequence... ]\n");
+                    bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                    bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                    bootMessagesRtb.ScrollToCaret();
                     break;
             }
 
@@ -328,6 +373,9 @@ namespace HydraLife
             {
                 timer1.Stop();
                 bootMessagesRtb.AppendText("[ Boot complete. Redirecting to login... ]\n");
+                bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                bootMessagesRtb.ScrollToCaret();
 
                 // LoginForm login = new LoginForm();
                 // login.Show();
@@ -386,8 +434,14 @@ namespace HydraLife
                     {
                         Directory.CreateDirectory(fullPath);
                         bootMessagesRtb.AppendText($"[{DateTime.Now:HH:mm:ss}] [OK] Created directory: {fullPath}\r\n");
+                        bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                        bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                        bootMessagesRtb.ScrollToCaret();
                         bootMessagesRtb.AppendText($"[OK] Created directory with success: Proceeding... {fullPath}\r\n");
-                        
+                        bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                        bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                        bootMessagesRtb.ScrollToCaret();
+
                         TriggerBackgroundFade(Color.FromArgb(0, 30, 0)); // 🟢 green for success
                     }
                     else
@@ -398,13 +452,19 @@ namespace HydraLife
                         if (hasFiles || hasSubDirs)
                         {
                             bootMessagesRtb.AppendText($"[SKIP] Directory already exists and is not empty. Skipping... {fullPath}\r\n");
+                            bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                            bootMessagesRtb.ScrollToCaret();
                             TriggerBackgroundFade(Color.FromArgb(30, 30, 0)); // 🟠 amber for skip
                             
 
                         }
                         else
                         {
-                            bootMessagesRtb.AppendText($"[OK] Directory exists but was empty. Proceding... {fullPath}\r\n");
+                            bootMessagesRtb.AppendText($"[OK] Directory exists but was empty. Skiping... {fullPath}\r\n");
+                            bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                            bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                            bootMessagesRtb.ScrollToCaret();
                             TriggerBackgroundFade(Color.FromArgb(0, 30, 30)); // 🔵 teal for empty but valid
                         }
                     }
@@ -415,6 +475,9 @@ namespace HydraLife
                 catch (Exception ex)
                 {
                     bootMessagesRtb.AppendText($"[ERROR] Failed to process {fullPath}, aborting: {ex.Message}\r\n");
+                    bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                    bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                    bootMessagesRtb.ScrollToCaret();
                     TriggerBackgroundFade(Color.DarkRed); // 🔴 red for error
                     dirIndex++;
                 }
@@ -423,9 +486,14 @@ namespace HydraLife
             {
                 directoriesFinalized = true; // ✅ Prevent future triggers
                 bootMessagesRtb.AppendText("All directories initialized. System ready.\r\n");
+                bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                bootMessagesRtb.ScrollToCaret();
                 TriggerBackgroundFade(Color.FromArgb(20, 20, 20)); // neutral tone
 
-                bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Launching HydraLife...\r\n");
+                bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Showing Login...\r\n");
+                lblCursor.Text = "Boot Completed...";
+          
                 TriggerBackgroundFade(Color.FromArgb(15, 15, 30)); // Deep blue for login
 
                 directoryTimer.Stop();
@@ -466,6 +534,9 @@ namespace HydraLife
                 if (!waitingForOk)
                 {
                     bootMessagesRtb.AppendText($"Checking {file}...\r\n");
+                    bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                    bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                    bootMessagesRtb.ScrollToCaret();
                     TriggerBackgroundFade(Color.FromArgb(10, 10, 30)); // bluish tone for scanning
                     waitingForOk = true;
                 }
@@ -475,11 +546,17 @@ namespace HydraLife
                     if (file.Contains("corrupt") || file == "boot.sys")
                     {
                         bootMessagesRtb.AppendText($"[ERROR] Failed to load {file}...\r\n");
+                        bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                        bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                        bootMessagesRtb.ScrollToCaret();
                         TriggerBackgroundFade(Color.DarkRed); // 🔴 dramatic red for failure
                     }
                     else
                     {
                         bootMessagesRtb.AppendText($"[OK] {file} loaded successfully...\r\n");
+                        bootMessagesRtb.AppendText("[ OK ] Proceding: ...\n");
+                        bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                        bootMessagesRtb.ScrollToCaret();
                         TriggerBackgroundFade(Color.FromArgb(0, 30, 0)); // 🟢 dark green for success
                    
                     }
@@ -494,6 +571,7 @@ namespace HydraLife
             else
             {
                 bootMessagesRtb.AppendText("System ready. Proceding to check app files and directories...\r\n");
+
                 TriggerBackgroundFade(Color.FromArgb(20, 20, 20)); // neutral tone
                 dirIndex = 0;
                 StartDirectoryCheck(); // ← this must be called

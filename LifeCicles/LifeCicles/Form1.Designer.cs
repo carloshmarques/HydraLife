@@ -34,6 +34,9 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnrestart = new System.Windows.Forms.Button();
+            this.btnEndSession = new System.Windows.Forms.Button();
+            this.btnCloseApp = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblTimer = new System.Windows.Forms.Label();
             this.bootMessagesRtb = new System.Windows.Forms.RichTextBox();
@@ -41,9 +44,6 @@
             this.lblCursor = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnrestart = new System.Windows.Forms.Button();
-            this.btnEndSession = new System.Windows.Forms.Button();
-            this.btnCloseApp = new System.Windows.Forms.Button();
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,96 +81,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(95, 1024);
             this.panel2.TabIndex = 8;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(191, 68);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(734, 23);
-            this.progressBar1.TabIndex = 9;
-            this.progressBar1.Visible = false;
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTimer.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblTimer.Location = new System.Drawing.Point(81, 60);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(0, 20);
-            this.lblTimer.TabIndex = 11;
-            this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bootMessagesRtb
-            // 
-            this.bootMessagesRtb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bootMessagesRtb.BackColor = System.Drawing.Color.Black;
-            this.bootMessagesRtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bootMessagesRtb.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bootMessagesRtb.ForeColor = System.Drawing.Color.Lime;
-            this.bootMessagesRtb.Location = new System.Drawing.Point(191, 314);
-            this.bootMessagesRtb.Name = "bootMessagesRtb";
-            this.bootMessagesRtb.ReadOnly = true;
-            this.bootMessagesRtb.Size = new System.Drawing.Size(731, 479);
-            this.bootMessagesRtb.TabIndex = 12;
-            this.bootMessagesRtb.Text = "";
-            this.bootMessagesRtb.TextChanged += new System.EventHandler(this.bootMessagesRtb_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label2.Location = new System.Drawing.Point(321, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
-            this.label2.TabIndex = 13;
-            // 
-            // lblCursor
-            // 
-            this.lblCursor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCursor.AutoSize = true;
-            this.lblCursor.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursor.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblCursor.Location = new System.Drawing.Point(922, 763);
-            this.lblCursor.Name = "lblCursor";
-            this.lblCursor.Size = new System.Drawing.Size(0, 20);
-            this.lblCursor.TabIndex = 14;
-            this.lblCursor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.Label1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.lblTimer);
-            this.panel3.Location = new System.Drawing.Point(111, 815);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(877, 209);
-            this.panel3.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label3.Location = new System.Drawing.Point(83, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "BIOS Boot Sequence:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // btnrestart
             // 
@@ -215,14 +125,104 @@
             this.btnCloseApp.UseVisualStyleBackColor = false;
             this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(191, 68);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(734, 23);
+            this.progressBar1.TabIndex = 9;
+            this.progressBar1.Visible = false;
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.BackColor = System.Drawing.Color.Transparent;
+            this.lblTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTimer.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblTimer.Location = new System.Drawing.Point(81, 60);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(0, 20);
+            this.lblTimer.TabIndex = 11;
+            this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bootMessagesRtb
+            // 
+            this.bootMessagesRtb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bootMessagesRtb.BackColor = System.Drawing.Color.Black;
+            this.bootMessagesRtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bootMessagesRtb.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bootMessagesRtb.ForeColor = System.Drawing.Color.Lime;
+            this.bootMessagesRtb.Location = new System.Drawing.Point(185, 314);
+            this.bootMessagesRtb.Name = "bootMessagesRtb";
+            this.bootMessagesRtb.ReadOnly = true;
+            this.bootMessagesRtb.Size = new System.Drawing.Size(731, 481);
+            this.bootMessagesRtb.TabIndex = 12;
+            this.bootMessagesRtb.Text = "";
+            this.bootMessagesRtb.TextChanged += new System.EventHandler(this.bootMessagesRtb_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label2.Location = new System.Drawing.Point(321, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.TabIndex = 13;
+            // 
+            // lblCursor
+            // 
+            this.lblCursor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCursor.AutoSize = true;
+            this.lblCursor.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursor.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblCursor.Location = new System.Drawing.Point(922, 763);
+            this.lblCursor.Name = "lblCursor";
+            this.lblCursor.Size = new System.Drawing.Size(0, 20);
+            this.lblCursor.TabIndex = 14;
+            this.lblCursor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.Label1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.lblTimer);
+            this.panel3.Location = new System.Drawing.Point(111, 815);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(877, 209);
+            this.panel3.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label3.Location = new System.Drawing.Point(83, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(219, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "BIOS Boot Sequence:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
             // PictureBox2
             // 
             this.PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PictureBox2.Image = global::LifeCicles.Properties.Resources.hydra;
-            this.PictureBox2.Location = new System.Drawing.Point(420, 0);
+            this.PictureBox2.Location = new System.Drawing.Point(415, 0);
             this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(270, 264);
+            this.PictureBox2.Size = new System.Drawing.Size(286, 295);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PictureBox2.TabIndex = 6;
             this.PictureBox2.TabStop = false;
