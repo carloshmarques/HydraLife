@@ -59,9 +59,10 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   ├── HydraLife.sln
 │   📁 LifeCicles/
 │   │   ├── App.config
-│   │   ├── Form1.Designer.cs
-│   │   ├── Form1.cs
-│   │   ├── Form1.resx
+│   │   📁 Boot System/
+│   │   │   ├── Form1.Designer.cs
+│   │   │   ├── Form1.cs
+│   │   │   ├── Form1.resx
 │   │   ├── HydraLife.csproj
 │   │   ├── HydraLife.csproj.user
 │   │   ├── Program.cs
