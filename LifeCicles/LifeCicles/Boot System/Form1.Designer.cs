@@ -39,12 +39,12 @@
             this.btnCloseApp = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.bootMessagesRtb = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCursor = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bootMessagesRtb = new System.Windows.Forms.RichTextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -59,7 +59,7 @@
             this.Label1.Location = new System.Drawing.Point(80, 157);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(893, 28);
+            this.Label1.Size = new System.Drawing.Size(900, 28);
             this.Label1.TabIndex = 4;
             this.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
@@ -149,22 +149,6 @@
             this.lblTimer.TabIndex = 11;
             this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bootMessagesRtb
-            // 
-            this.bootMessagesRtb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bootMessagesRtb.BackColor = System.Drawing.Color.Black;
-            this.bootMessagesRtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bootMessagesRtb.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bootMessagesRtb.ForeColor = System.Drawing.Color.Lime;
-            this.bootMessagesRtb.Location = new System.Drawing.Point(185, 314);
-            this.bootMessagesRtb.Name = "bootMessagesRtb";
-            this.bootMessagesRtb.ReadOnly = true;
-            this.bootMessagesRtb.Size = new System.Drawing.Size(731, 481);
-            this.bootMessagesRtb.TabIndex = 12;
-            this.bootMessagesRtb.Text = "";
-            this.bootMessagesRtb.TextChanged += new System.EventHandler(this.bootMessagesRtb_TextChanged);
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -173,7 +157,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label2.Location = new System.Drawing.Point(325, 22);
+            this.label2.Location = new System.Drawing.Point(332, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 13;
@@ -199,7 +183,7 @@
             this.panel3.Controls.Add(this.lblTimer);
             this.panel3.Location = new System.Drawing.Point(111, 815);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(881, 209);
+            this.panel3.Size = new System.Drawing.Size(888, 209);
             this.panel3.TabIndex = 15;
             // 
             // label3
@@ -226,6 +210,22 @@
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PictureBox2.TabIndex = 6;
             this.PictureBox2.TabStop = false;
+            // 
+            // bootMessagesRtb
+            // 
+            this.bootMessagesRtb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bootMessagesRtb.BackColor = System.Drawing.Color.Black;
+            this.bootMessagesRtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bootMessagesRtb.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bootMessagesRtb.ForeColor = System.Drawing.Color.Lime;
+            this.bootMessagesRtb.Location = new System.Drawing.Point(185, 314);
+            this.bootMessagesRtb.Name = "bootMessagesRtb";
+            this.bootMessagesRtb.ReadOnly = true;
+            this.bootMessagesRtb.Size = new System.Drawing.Size(731, 481);
+            this.bootMessagesRtb.TabIndex = 12;
+            this.bootMessagesRtb.Text = "";
+            this.bootMessagesRtb.TextChanged += new System.EventHandler(this.bootMessagesRtb_TextChanged);
             // 
             // Form1
             // 
@@ -266,13 +266,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblTimer;
-        private System.Windows.Forms.RichTextBox bootMessagesRtb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnrestart;
         private System.Windows.Forms.Button btnEndSession;
         private System.Windows.Forms.Label lblCursor;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox bootMessagesRtb;
     }
 }
 
