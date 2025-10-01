@@ -68,6 +68,7 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   📁 LoginSystem/
 │   │   │   ├── LoginForm.Designer.cs
 │   │   │   ├── LoginForm.cs
+│   │   │   ├── LoginForm.resx
 │   │   │   ├── LoginPanel.Designer.cs
 │   │   │   ├── LoginPanel.cs
 │   │   │   ├── LoginPanel.resx
