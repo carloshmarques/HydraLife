@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|c:\\users\\carlo\\source\\repos\\hydralife\\lifecicles\\lifecicles\\loginsystem\\loginpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\loginsystem\\loginpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|c:\\users\\carlo\\source\\repos\\hydralife\\lifecicles\\lifecicles\\loginsystem\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\loginsystem\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|c:\\users\\carlo\\source\\repos\\hydralife\\lifecicles\\lifecicles\\loginsystem\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\loginsystem\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|c:\\users\\carlo\\source\\repos\\hydralife\\lifecicles\\lifecicles\\loginsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|LifeCicles\\HydraLife.csproj|solutionrelative:lifecicles\\loginsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +51,55 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginPanel.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginPanel.cs",
+              "RelativeDocumentMoniker": "LifeCicles\\LoginSystem\\LoginPanel.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginPanel.cs [Design]",
+              "RelativeToolTip": "LifeCicles\\LoginSystem\\LoginPanel.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:11:21.826Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.resx",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginForm.resx",
+              "RelativeDocumentMoniker": "LifeCicles\\LoginSystem\\LoginForm.resx",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginForm.resx",
+              "RelativeToolTip": "LifeCicles\\LoginSystem\\LoginForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-10-01T16:11:19.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "LifeCicles\\LoginSystem\\LoginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginForm.Designer.cs",
+              "RelativeToolTip": "LifeCicles\\LoginSystem\\LoginForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:11:17.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LifeCicles\\LoginSystem\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\HydraLife\\LifeCicles\\LifeCicles\\LoginSystem\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LifeCicles\\LoginSystem\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:11:10.871Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
