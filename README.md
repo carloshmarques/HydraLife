@@ -72,6 +72,9 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   ├── LoginPanel.Designer.cs
 │   │   │   ├── LoginPanel.cs
 │   │   │   ├── LoginPanel.resx
+│   │   │   ├── VirtualDesktopForm.Designer.cs
+│   │   │   ├── VirtualDesktopForm.cs
+│   │   │   ├── VirtualDesktopForm.resx
 │   │   ├── Program.cs
 │   │   📁 Properties/
 │   │   │   ├── AssemblyInfo.cs
