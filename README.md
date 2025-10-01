@@ -63,6 +63,8 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   ├── Form1.Designer.cs
 │   │   │   ├── Form1.cs
 │   │   │   ├── Form1.resx
+│   │   │   ├── LoginForm.Designer.cs
+│   │   │   ├── LoginForm.cs
 │   │   ├── HydraLife.csproj
 │   │   ├── HydraLife.csproj.user
 │   │   ├── Program.cs
