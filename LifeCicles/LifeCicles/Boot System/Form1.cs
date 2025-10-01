@@ -58,9 +58,21 @@ namespace HydraLife
             {
                 string fullPath = Path.Combine(basePath, dir);
                 Directory.CreateDirectory(fullPath);
-                bootMessagesRtb.AppendText($"[ OK ] Created: {fullPath}\n");
-                bootMessagesRtb.AppendText("[ Proceding ]: ...\n");
-                bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
+                if (!bootMessagesRtb.IsDisposed && bootMessagesRtb.IsHandleCreated)
+                {
+                    bootMessagesRtb.AppendText($"[ OK ] Created: {fullPath}\n");
+                }
+
+                if (bootMessagesRtb.IsHandleCreated)
+                {
+                    bootMessagesRtb.AppendText($"[ OK ] Created: {fullPath}\n");
+                }
+
+                if (bootMessagesRtb != null && !bootMessagesRtb.IsDisposed && bootMessagesRtb.IsHandleCreated)
+{
+    bootMessagesRtb.SelectionStart = bootMessagesRtb.TextLength;
+}
+
                 bootMessagesRtb.ScrollToCaret();
             }
 
@@ -281,7 +293,15 @@ namespace HydraLife
                 cursorBlinkTimer.Dispose();
             }
 
-            Task.Delay(1000); // pausa estética
+            startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            TriggerBackgroundFade(ColorTranslator.FromHtml("#2196F3"));
+
+            InjectSystemDirectories();
+            StartDirectoryCheck();
+            StartCursorBlink();
+            timer1.Start();
+
+            Task.Delay(1000);
 
             try
             {
@@ -290,8 +310,9 @@ namespace HydraLife
 
                 LoginForm login = new LoginForm();
                 login.Show();
+                this.Hide(); // oculta sem destruir
 
-                this.Dispose(); // encerra o Form1 (Splash)
+                //this.Dispose(); // encerra o Form1 (Splash)
             }
             catch (Exception ex)
             {
