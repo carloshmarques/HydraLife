@@ -15,30 +15,18 @@ namespace LifeCicles.LoginSystem
     /// </summary>
     public partial class LoginPanel : UserControl
     {
-
-        /// <summary>
-        /// Initializes the login panel and attaches the Load event handler.
-        /// </summary>
-
         public LoginPanel()
         {
             InitializeComponent();
             this.Load += LoginPanel_Load;
-
+            lblLinkHelp.LinkClicked += lblLinkHelp_LinkClicked;
         }
-        /// <summary>
-        /// Called when the login panel is loaded.
-        /// Ensures that the admin account exists.
-        /// </summary>
+
         private void LoginPanel_Load(object sender, EventArgs e)
         {
             EnsureAdminAccountExists();
         }
 
-        /// <summary>
-        /// Called when the login panel is loaded.
-        /// Ensures that the admin account exists.
-        /// </summary>
         private void EnsureAdminAccountExists()
         {
             string timestamp = DateTime.Now.ToString("HH:mm:ss");
@@ -48,25 +36,12 @@ namespace LifeCicles.LoginSystem
             if (!adminExists)
             {
                 loginTerminal.AppendText($"[{timestamp}] [ WARN ] Admin account not found. Creating dummy...\n");
-                // Future logic to create account
             }
         }
 
-        /// <summary>
-        /// Raised when login credentials are valid and access is granted.
-        /// </summary>
         public event EventHandler LoginSuccess;
-
-        /// <summary>
-        /// Raised when login credentials are invalid or missing.
-        /// </summary>
-
         public event EventHandler LoginFailure;
 
-        /// <summary>
-        /// Validates user credentials and triggers success or failure events.
-        /// Called when the Login button is clicked.
-        /// </summary>
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string user = usernameeTxt.Text;
@@ -76,6 +51,7 @@ namespace LifeCicles.LoginSystem
             {
                 string timestamp = DateTime.Now.ToString("HH:mm:ss");
                 loginTerminal.AppendText($"[{timestamp}] [ WARN ] Username or password is blank\n");
+                SessionManager.LogFailure(user);
                 LoginFailure?.Invoke(this, EventArgs.Empty);
                 return;
             }
@@ -84,15 +60,30 @@ namespace LifeCicles.LoginSystem
             {
                 string timestamp = DateTime.Now.ToString("HH:mm:ss");
                 loginTerminal.AppendText($"[{timestamp}] [ OK ] Credentials accepted: launching Hydra Desktop...\n");
+                SessionManager.StartSession(user);
                 LoginSuccess?.Invoke(this, EventArgs.Empty);
             }
             else
             {
                 string timestamp = DateTime.Now.ToString("HH:mm:ss");
                 loginTerminal.AppendText($"[{timestamp}] [ ERROR ] Invalid credentials\n");
+                SessionManager.LogFailure(user);
                 LoginFailure?.Invoke(this, EventArgs.Empty);
             }
         }
+
+        private void lblLinkHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string timestamp = DateTime.Now.ToString("HH:mm:ss");
+            loginTerminal.AppendText($"[{timestamp}] [ HELP ] To log in, enter your username and password.\n");
+            loginTerminal.AppendText($"[{timestamp}] [ HELP ] Default admin credentials: admin / hydra\n");
+            loginTerminal.AppendText($"[{timestamp}] [ HELP ] Press Login to continue or contact support.\n");
+
+            Reporter.Report("help_request", "User clicked help link for login guidance", "LoginPanel");
+        }
     }
+
+
+
 }
 

@@ -117,6 +117,7 @@
             this.lblLinkHelp.TabIndex = 23;
             this.lblLinkHelp.TabStop = true;
             this.lblLinkHelp.Text = "Help me:";
+            this.lblLinkHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkHelp_LinkClicked);
             // 
             // loginTerminal
             // 

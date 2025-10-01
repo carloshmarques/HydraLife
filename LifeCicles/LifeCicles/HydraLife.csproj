@@ -86,6 +86,12 @@
     <Compile Include="LoginSystem\LoginPanel.Designer.cs">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginSystem\VirtualDesktopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSystem\VirtualDesktopForm.Designer.cs">
+      <DependentUpon>VirtualDesktopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Boot System\Form1.resx">
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginSystem\LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSystem\VirtualDesktopForm.resx">
+      <DependentUpon>VirtualDesktopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
