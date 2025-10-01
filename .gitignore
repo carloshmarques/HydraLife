@@ -22,4 +22,11 @@ ignore.*
 .env.test
 *.pem
 
+# .gitignore
+.vs/
+*.suo
+*.pdb
+bin/
+obj/
+
 ###< carloshmarques/HydraLife ###
