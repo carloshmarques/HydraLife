@@ -15,10 +15,10 @@ namespace LifeCicles.LoginSystem
     /// </summary>
     public partial class LoginPanel : UserControl
     {
+
         /// <summary>
         /// Initializes the login panel and attaches the Load event handler.
         /// </summary>
-
 
         public LoginPanel()
         {
@@ -63,7 +63,7 @@ namespace LifeCicles.LoginSystem
 
         public event EventHandler LoginFailure;
 
-       
+        /// <summary>
         /// Validates user credentials and triggers success or failure events.
         /// Called when the Login button is clicked.
         /// </summary>
