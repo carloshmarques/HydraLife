@@ -1,4 +1,5 @@
 ﻿
+using LifeCicles.Boot_System;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -269,6 +270,33 @@ namespace HydraLife
         //     1️-> Initial Setup in Form1_Load
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Launching HydraLife System...\r\n");
+            lblCursor.Text = "Boot Completed... ";
+            bootMessagesRtb.AppendText("[ OK ] Bye...\n");
+
+            if (cursorBlinkTimer != null)
+            {
+                cursorBlinkTimer.Stop();
+                cursorBlinkTimer.Dispose();
+            }
+
+            Task.Delay(1000); // pausa estética
+
+            try
+            {
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+
+                LoginForm login = new LoginForm();
+                login.Show();
+
+                this.Dispose(); // encerra o Form1 (Splash)
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao abrir LoginForm: " + ex.Message, "Falha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             TriggerBackgroundFade(ColorTranslator.FromHtml("#2196F3"));

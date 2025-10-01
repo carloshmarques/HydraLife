@@ -70,6 +70,12 @@
     <Compile Include="Boot System\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boot System\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boot System\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Boot System\Form1.resx">
