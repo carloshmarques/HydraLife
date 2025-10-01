@@ -19,8 +19,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 namespace HydraLife
 {       
         public partial class Form1 : Form
-
         {
+
+
 
         private string startTimeFormatted; // ✅ Only here
 
@@ -141,6 +142,7 @@ namespace HydraLife
         };
 
 
+
         private int dirIndex = 0;
         private Timer directoryTimer;
 
@@ -178,17 +180,42 @@ namespace HydraLife
         private Color endColor;
         private bool directoriesFinalized = false;
 
-
+        // 🌈 Campos para transição multicolorida
+        private Color[] transitionColors;
+        private int currentColorIndex;
 
         private Color destColor = Color.FromArgb(0, 120, 215); // Windows blue 
-        // Constructor
+    
+
         public Form1()
         {
-
             InitializeComponent();
+            // 🌈 Inicializar sequência de cores para transição
+            transitionColors = new Color[]
+            {
+            Color.Black,
+            Color.DarkSlateBlue,
+            Color.MediumPurple,
+            Color.DeepSkyBlue,
+            Color.DodgerBlue,
+            Color.FromArgb(0, 120, 215) // ← fim desejado? // Windows blue
+            };
+
+            currentColorIndex = 0;
+            blendStep = 0;
+            blendSteps = 100; // ← Aqui defines o número de passos
+
+            startColor = transitionColors[currentColorIndex];
+            endColor = transitionColors[currentColorIndex + 1];
+
+            // ⏱️ Inicializar e configurar o timer
+            colorBlendTimer = new Timer();
+            colorBlendTimer.Interval = 30; // ← Aqui defines a velocidade
+            colorBlendTimer.Tick += ColorBlendTimer_Tick;
+            colorBlendTimer.Start();
             this.BackColor = Color.FromArgb(0, 0, 64); // Azul escuro elegante
             bootMessagesRtb.BackColor = this.BackColor; // Igual ao fundo do Form
-            
+
             bootMessagesRtb.ReadOnly = true;
             bootMessagesRtb.Enabled = true; // ✅ Keep it enabled to preserve BackColor
             bootMessagesRtb.TabStop = false;
@@ -206,7 +233,8 @@ namespace HydraLife
             progressBar1.Maximum = appDirectories.Length;
             progressBar1.Value = 0;
         }
-
+ 
+        // end Form1 class
         // Background color change variables
         private Color[] bgColors = new Color[]
         {
@@ -241,6 +269,7 @@ namespace HydraLife
         //     1️-> Initial Setup in Form1_Load
         private void Form1_Load(object sender, EventArgs e)
         {
+
             startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             TriggerBackgroundFade(ColorTranslator.FromHtml("#2196F3"));
 
@@ -353,6 +382,7 @@ namespace HydraLife
 
         }
         // 2️ Timer for ProgressBar + Cinematic Logs + Percentage
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             progressBar1.Increment(10);
@@ -630,14 +660,14 @@ namespace HydraLife
             }
 
             colorBlendTimer = new Timer();
-            colorBlendTimer.Interval = 100;
+            colorBlendTimer.Interval = 50;
             colorBlendTimer.Tick += ColorBlendTimer_Tick;
             colorBlendTimer.Start();
             Console.WriteLine($"Current: {BackColor.R},{BackColor.G},{BackColor.B} → Target: {targetColor.R},{targetColor.G},{targetColor.B}");
 
 
         }
-
+        
         private void ColorBlendTimer_Tick(object sender, EventArgs e)
         {
             if (blendStep <= blendSteps)
