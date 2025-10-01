@@ -280,12 +280,18 @@ namespace HydraLife
 
         //    🧩 Finalizing Form1.cs — Complete Structure
         //     1️-> Initial Setup in Form1_Load
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
 
+            // 1. Efeitos visuais iniciais
+            TriggerBackgroundFade(ColorTranslator.FromHtml("#2196F3"));
+            StartCursorBlink();
+            timer1.Start();
+
+            // 2. Logs e mensagens
             bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Launching HydraLife System...\r\n");
-            lblCursor.Text = "Boot Completed... ";
-            bootMessagesRtb.AppendText("[ OK ] Bye...\n");
+            //lblCursor.Text = "Boot Completed... ";
+            bootMessagesRtb.AppendText("[ OK ] Bye...\n"); ;
 
             if (cursorBlinkTimer != null)
             {
@@ -296,40 +302,37 @@ namespace HydraLife
             startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             TriggerBackgroundFade(ColorTranslator.FromHtml("#2196F3"));
 
+            // 3. Diretórios e verificação
             InjectSystemDirectories();
-            StartDirectoryCheck();
+            StartDirectoryCheck();          
             StartCursorBlink();
             timer1.Start();
 
-            Task.Delay(1000);
+            // 4. Espera para splash respirar
+            await Task.Delay(10000); // ⏳ tempo calibrado
+
+            // 5. Últimos efeitos antes do login
+            StartDirectoryCheck(); // se quiser reforçar
+            TriggerBackgroundFade(Color.Black); // exemplo de transição final
+
+            // 6. Login
 
             try
             {
-                GC.Collect();
-                GC.WaitForPendingFinalizers();
-
                 LoginForm login = new LoginForm();
                 login.Show();
-                this.Hide(); // oculta sem destruir
-
-                //this.Dispose(); // encerra o Form1 (Splash)
+                this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao abrir LoginForm: " + ex.Message, "Falha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error opening LoginForm: " + ex.Message, "Eror!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             startTimeFormatted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             TriggerBackgroundFade(ColorTranslator.FromHtml("#2196F3"));
+            // 🕒 Espera para deixar o splash respirar
+            
 
-            Task.Delay(3000).ContinueWith(_ =>
-            {
-                this.Invoke((MethodInvoker)(() =>
-                {
-                    StartDirectoryCheck(); // ✅ Este é o verdadeiro “StartBootSequence”
-                   
-                }));
-            });
             timer1.Start(); // Start progress
             StartCursorBlink(); // Start the cursor blinking
             StartCursorBlink();
@@ -402,7 +405,7 @@ namespace HydraLife
             LifeCicles.Properties.Settings.Default.Save();
 
             // Show the button after 10 seconds
-            Task.Delay(5000).ContinueWith(_ =>
+            await Task.Delay(5000).ContinueWith(_ =>
             {
                 this.Invoke((MethodInvoker)(() =>
                 {
@@ -513,7 +516,7 @@ namespace HydraLife
         }
         private bool directoriesInitialized = false;
 
-        private void DirectoryTimer_Tick(object sender, EventArgs e)
+        private async void DirectoryTimer_Tick(object sender, EventArgs e)
         {
             if (dirIndex < appDirectories.Length)
             {
@@ -587,20 +590,15 @@ namespace HydraLife
                 bootMessagesRtb.AppendText("[SYSTEM] Boot sequence complete. Lauching HydraLife System...\r\n");
                 
                 lblCursor.Text = $"Boot Completed... ";
+                
+                await Task.Delay(1000); // ⏳ pausa final
 
-                bootMessagesRtb.AppendText("[ OK ] Bye...\n");
-
-                Task.Delay(1000).ContinueWith(t =>
+                if (cursorBlinkTimer != null )
                 {
-                    this.Invoke((Action)(() =>
-                    {
-                        cursorBlinkTimer.Stop();
-                        lblCursor.Text = "_"; // Mantém o cursor visível
-                    }));
-                });
+                    cursorBlinkTimer.Stop();
+                }
 
-
-
+                lblCursor.Text = "_"; // Mantém o cursor visível
 
 
                 bootMessagesRtb.SelectionStart = bootMessagesRtb.Text.Length;
@@ -612,7 +610,7 @@ namespace HydraLife
                 directoryTimer.Stop();
 
                 // ✨ Cinematic pause before showing buttons
-                Task.Delay(3000).ContinueWith(_ =>
+               await Task.Delay(3000).ContinueWith(_ =>
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
@@ -639,7 +637,7 @@ namespace HydraLife
 
         private void SpinnerTimer_Tick(object sender, EventArgs e)
         {
-            if (fileCheckIndex < bootFiles.Length)               
+            if (fileCheckIndex < bootFiles.Length)                                            
             {
                 progressBar1.Value = dirIndex + 1;
                 string file = bootFiles[fileCheckIndex];
