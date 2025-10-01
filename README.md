@@ -63,10 +63,14 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   ├── Form1.Designer.cs
 │   │   │   ├── Form1.cs
 │   │   │   ├── Form1.resx
-│   │   │   ├── LoginForm.Designer.cs
-│   │   │   ├── LoginForm.cs
 │   │   ├── HydraLife.csproj
 │   │   ├── HydraLife.csproj.user
+│   │   📁 LoginSystem/
+│   │   │   ├── LoginForm.Designer.cs
+│   │   │   ├── LoginForm.cs
+│   │   │   ├── LoginPanel.Designer.cs
+│   │   │   ├── LoginPanel.cs
+│   │   │   ├── LoginPanel.resx
 │   │   ├── Program.cs
 │   │   📁 Properties/
 │   │   │   ├── AssemblyInfo.cs
@@ -76,6 +80,7 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   ├── Settings.settings
 │   │   📁 Resources/
 │   │   │   ├── 25706.png
+│   │   │   ├── Technical_Support.jpg
 │   │   │   ├── close.png
 │   │   │   ├── hydra.png
 │   │   │   ├── img.png
