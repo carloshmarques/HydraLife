@@ -84,17 +84,29 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   ├── Settings.settings
 │   │   📁 Resources/
 │   │   │   ├── 25706.png
+│   │   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png.png
+│   │   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png1.png
+│   │   │   ├── 553600346_777744621702419_7159171541262318692_n.jpg
+│   │   │   ├── End messaging session.png
+│   │   │   ├── System reboot (1).png
+│   │   │   ├── System reboot (1)1.png
+│   │   │   ├── System reboot.png
 │   │   │   ├── Technical_Support.jpg
+│   │   │   ├── Tray arrow up.png
+│   │   │   ├── Window minimize.png
 │   │   │   ├── close.png
 │   │   │   ├── hydra.png
 │   │   │   ├── img.png
 │   │   │   ├── logout.png
+│   │   │   ├── material.png
 │   │   │   ├── power-button-off.png
 │   │   │   ├── power-on.png
 │   │   │   ├── reload.png
 │   │   │   ├── reset.png
 │   │   │   ├── switch.png
 │   │   │   ├── switch1.png
+│   │   │   ├── transferir.png
+│   │   │   ├── transferir1.png
 │   │   📁 bin/
 │   │   │   📁 Debug/
 │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
@@ -104,6 +116,7 @@ open git bash on  a location of your chosing and type git clone https://github.c
 │   │   │   │   ├── LifeCicles.exe
 │   │   │   │   ├── LifeCicles.exe.config
 │   │   │   │   ├── LifeCicles.pdb
+│   │   ├── hydra.ico
 │   │   📁 obj/
 │   │   │   📁 Debug/
 │   │   │   │   ├── DesignTimeResolveAssemblyReferences.cache
