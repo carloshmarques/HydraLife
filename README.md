@@ -84,6 +84,9 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   │   │   ├── VirtualDesktopForm.Designer.cs
 │   │   │   ├── VirtualDesktopForm.cs
 │   │   │   ├── VirtualDesktopForm.resx
+│   │   📁 Modules/
+│   │   │   📁 Functions/
+│   │   │   │   ├── ExButton.cs
 │   │   ├── Program.cs
 │   │   📁 Properties/
 │   │   │   ├── AssemblyInfo.cs
@@ -95,7 +98,6 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   │   │   ├── 25706.png
 │   │   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png.png
 │   │   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png1.png
-│   │   │   ├── 553600346_777744621702419_7159171541262318692_n.jpg
 │   │   │   ├── End messaging session.png
 │   │   │   ├── System reboot (1).png
 │   │   │   ├── System reboot (1)1.png
@@ -104,6 +106,11 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   │   │   ├── Tray arrow up.png
 │   │   │   ├── Window minimize.png
 │   │   │   ├── close.png
+│   │   │   ├── eu.jpg
+│   │   │   ├── hercaclitus.jpg
+│   │   │   ├── hercaclitus1.jpg
+│   │   │   ├── hercaclitus2.jpg
+│   │   │   ├── hercaclitus3.jpg
 │   │   │   ├── hydra.png
 │   │   │   ├── img.png
 │   │   │   ├── logout.png
