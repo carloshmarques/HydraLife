@@ -63,6 +63,7 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 
 ```
 ├── CHANGELOG.md
+├── HydraBlueprint.md
 ├── LICENSE
 📁 LifeCicles/
 │   ├── HydraLife.sln
@@ -209,6 +210,7 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   ├── shuting_down.png
 │   ├── shuting_down2.png
 ├── changelog_changes.py
+├── currentStatusGanttChart.md
 ├── generate_tree.py
 ├── requirements.txt
 ├── tree_text
