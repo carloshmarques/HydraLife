@@ -48,7 +48,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>LifeCicles.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hydra.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -176,6 +180,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Technical_Support.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hydra.ico" />
+    <None Include="Resources\553600346_777744621702419_7159171541262318692_n.jpg" />
+    <None Include="Resources\End messaging session.png" />
+    <None Include="Resources\System reboot %281%291.png" />
+    <None Include="Resources\System reboot %281%29.png" />
+    <None Include="Resources\System reboot.png" />
+    <None Include="Resources\Tray arrow up.png" />
+    <None Include="Resources\Window minimize.png" />
+    <None Include="Resources\transferir1.png" />
+    <None Include="Resources\transferir.png" />
+    <None Include="Resources\493-4933495_close-button-png-transparent-image-close-icon-png1.png" />
+    <None Include="Resources\493-4933495_close-button-png-transparent-image-close-icon-png.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

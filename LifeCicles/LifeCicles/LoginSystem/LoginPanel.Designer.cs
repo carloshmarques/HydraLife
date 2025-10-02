@@ -10,7 +10,7 @@
         /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing" //true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -61,9 +61,9 @@
             this.heraclito.ForeColor = System.Drawing.Color.LimeGreen;
             this.heraclito.Location = new System.Drawing.Point(148, 73);
             this.heraclito.Name = "heraclito";
-            this.heraclito.Size = new System.Drawing.Size(582, 23);
+            this.heraclito.Size = new System.Drawing.Size(593, 23);
             this.heraclito.TabIndex = 0;
-            this.heraclito.Text = "It\'s in changing that we find purpose -\" Heraclitus\"";
+            this.heraclito.Text = "\"It\'s in changing that we find purpose.\" — Heraclitus";
             this.heraclito.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // usernameLbl
@@ -130,7 +130,7 @@
             this.loginTerminal.Name = "loginTerminal";
             this.loginTerminal.Size = new System.Drawing.Size(603, 96);
             this.loginTerminal.TabIndex = 24;
-            this.loginTerminal.Text = "test txt";
+            this.loginTerminal.Text = "";
             // 
             // lblStatus
             // 
@@ -164,7 +164,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label heraclito;  // to not toucg and kali linux like "the uiet you became, the better you ear", just for visual kicks and thrills
+        private System.Windows.Forms.Label heraclito;  // to not touch and kali linux like "the quiet you became, the better you ear", just for visual kicks and thrills
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.Label passwordLbl;
         private System.Windows.Forms.TextBox usernameeTxt;

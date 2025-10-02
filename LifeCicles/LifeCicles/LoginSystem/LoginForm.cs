@@ -21,7 +21,7 @@ namespace LifeCicles.Boot_System
         {
             InitializeComponent();
             /// <summary>
-            /// ensire Admin Accounts calla method exiats 
+            /// ensure Admin Accounts call a method exists 
 
             /// </summary>
         }
@@ -29,7 +29,7 @@ namespace LifeCicles.Boot_System
         private void LoginForm_Load(object sender, EventArgs e)
         {
             /// <summary>
-            /// ensire Admin Accounts exiats 
+            /// ensure Admin Accounts exists 
             
             /// </summary>
 

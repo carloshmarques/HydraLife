@@ -24,6 +24,7 @@ namespace LifeCicles.LoginSystem
 
         private void LoginPanel_Load(object sender, EventArgs e)
         {
+            loginTerminal.Text = "path to where form is 'home', like git style"; // to be replaced with best logic here:....
             EnsureAdminAccountExists();
         }
 
@@ -51,7 +52,7 @@ namespace LifeCicles.LoginSystem
             {
                 string timestamp = DateTime.Now.ToString("HH:mm:ss");
                 loginTerminal.AppendText($"[{timestamp}] [ WARN ] Username or password is blank\n");
-                SessionManager.LogFailure(user);
+                //SessionManager.LogFailure(user);
                 LoginFailure?.Invoke(this, EventArgs.Empty);
                 return;
             }
@@ -60,14 +61,14 @@ namespace LifeCicles.LoginSystem
             {
                 string timestamp = DateTime.Now.ToString("HH:mm:ss");
                 loginTerminal.AppendText($"[{timestamp}] [ OK ] Credentials accepted: launching Hydra Desktop...\n");
-                SessionManager.StartSession(user);
+                //SessionManager.StartSession(user);
                 LoginSuccess?.Invoke(this, EventArgs.Empty);
             }
             else
             {
                 string timestamp = DateTime.Now.ToString("HH:mm:ss");
                 loginTerminal.AppendText($"[{timestamp}] [ ERROR ] Invalid credentials\n");
-                SessionManager.LogFailure(user);
+                //SessionManager.LogFailure(user);
                 LoginFailure?.Invoke(this, EventArgs.Empty);
             }
         }
@@ -79,7 +80,7 @@ namespace LifeCicles.LoginSystem
             loginTerminal.AppendText($"[{timestamp}] [ HELP ] Default admin credentials: admin / hydra\n");
             loginTerminal.AppendText($"[{timestamp}] [ HELP ] Press Login to continue or contact support.\n");
 
-            Reporter.Report("help_request", "User clicked help link for login guidance", "LoginPanel");
+            //Reporter.Report("help_request", "User clicked help link for login guidance", "LoginPanel");
         }
     }
 

@@ -17,7 +17,13 @@ namespace LifeCicles
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // TEMPORARY: Launch Hydra Desktop directly
+            Application.Run(new LoginSystem.VirtualDesktopForm());
         }
     }
 }
