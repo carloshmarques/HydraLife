@@ -93,16 +93,6 @@ namespace LifeCicles.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _553600346_777744621702419_7159171541262318692_n {
-            get {
-                object obj = ResourceManager.GetObject("553600346_777744621702419_7159171541262318692_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _switch {
             get {
                 object obj = ResourceManager.GetObject("switch", resourceCulture);
@@ -113,9 +103,9 @@ namespace LifeCicles.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close {
+        internal static System.Drawing.Bitmap End_messaging_session {
             get {
-                object obj = ResourceManager.GetObject("close", resourceCulture);
+                object obj = ResourceManager.GetObject("End messaging session", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +113,9 @@ namespace LifeCicles.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap End_messaging_session {
+        internal static System.Drawing.Bitmap hercaclitus {
             get {
-                object obj = ResourceManager.GetObject("End messaging session", resourceCulture);
+                object obj = ResourceManager.GetObject("hercaclitus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

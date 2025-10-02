@@ -157,6 +157,7 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "LoginPanel";
             this.Size = new System.Drawing.Size(891, 473);
+            this.Load += new System.EventHandler(this.LoginPanel_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,7 +23,8 @@ namespace LifeCicles
             Application.SetCompatibleTextRenderingDefault(false);
 
             // TEMPORARY: Launch Hydra Desktop directly
-            Application.Run(new LoginSystem.VirtualDesktopForm());
+            Application.Run(new LoginSystem.VirtualDesktopForm());  
+             
         }
     }
 }

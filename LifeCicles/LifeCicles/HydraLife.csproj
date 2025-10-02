@@ -96,6 +96,9 @@
     <Compile Include="LoginSystem\VirtualDesktopForm.Designer.cs">
       <DependentUpon>VirtualDesktopForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Functions\ExButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Boot System\Form1.resx">
@@ -112,18 +115,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -186,7 +189,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hydra.ico" />
-    <None Include="Resources\553600346_777744621702419_7159171541262318692_n.jpg" />
+    <None Include="Resources\hercaclitus3.jpg" />
+    <None Include="Resources\hercaclitus2.jpg" />
+    <None Include="Resources\eu.jpg" />
+    <None Include="Resources\hercaclitus1.jpg" />
     <None Include="Resources\End messaging session.png" />
     <None Include="Resources\System reboot %281%291.png" />
     <None Include="Resources\System reboot %281%29.png" />
@@ -198,5 +204,6 @@
     <None Include="Resources\493-4933495_close-button-png-transparent-image-close-icon-png1.png" />
     <None Include="Resources\493-4933495_close-button-png-transparent-image-close-icon-png.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

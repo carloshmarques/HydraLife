@@ -82,6 +82,11 @@ namespace LifeCicles.LoginSystem
 
             //Reporter.Report("help_request", "User clicked help link for login guidance", "LoginPanel");
         }
+
+        private void LoginPanel_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
