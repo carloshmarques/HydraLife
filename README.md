@@ -47,6 +47,15 @@ open git bash on  a location of your chosing and type git clone https://github.c
 
 ---
 
+## [02/10/2025]
+- Adicionado `currentStatusGanttChart.md` com resumo das etapas e progresso
+
+----
+## 📊 Estado Atual
+Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusGanttChart.md)
+
+---
+
 ## 🌲 **Project tree**
 
 <!-- ... [SHOW YOUR PROJECT TREE HERE IF USEFUL] -->
