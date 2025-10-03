@@ -1,35 +1,46 @@
-# 📊 HydraDesktop — Gantt-style Etapas (Resumo)
+# 🧠 HydraDesktop — Gantt Técnico-Filosófico
 
-Este documento resume o estado atual do desenvolvimento do HydraDesktop, com visão clara das etapas concluídas, em curso e planeadas. Serve como referência rápida para visitantes e para o próprio autor acompanhar a evolução.
+## 🔧 UI & UX Refinement
 
----
+- [x] Encerramento com fade-out e balão elegante via trayIcon
+- [x] Minimização para taskbar sem sequestrar sistema host
+- [ ] Mensagem de boas-vindas com nome e imagem sobre o relógio (estilo Windows 8.1)
+- [ ] Remoção de botões redundantes (maximizar/restaurar) com lógica de minimização inteligente
+- [ ] Estilização do menuStrip1 e menuToolStrip ao estilo XFCE/Bugtraq (dimmed, técnico, minimalista)
+- [ ] Sons de notificação substituídos por música suave e contextual (volume baixo, estilo Windows)
 
-## 📆 Etapas e Progresso
+## 🚀 Performance & Acessibilidade
 
-| Etapa                                 | Estado     | Início       | Fim Previsto | Notas                                                  |
-|--------------------------------------|------------|--------------|--------------|--------------------------------------------------------|
-| Layout de cima para baixo            | ✅ Feito    | 01/10/2025   | 02/10/2025   | TopBar, MenuStrip, Content, TaskBar                   |
-| Botão minimizar para bandeja         | ✅ Feito    | 02/10/2025   | 02/10/2025   | TrayIcon com fade-in                                  |
-| Fade-in na restauração               | 🔄 Em curso| 02/10/2025   | 03/10/2025   | Timer e Opacity                                        |
-| Mensagens no RichTextBox             | 🔜 Planeado| 03/10/2025   | 04/10/2025   | Logs, lembretes, estilo Git/Linux                     |
-| Estilos camaleónicos                 | 🔜 Planeado| 04/10/2025   | 06/10/2025   | Unity, Blend, Minimal                                 |
-| Detectar ambiente virtual            | 🔜 Planeado| 06/10/2025   | 07/10/2025   | VMware, TerminalSession                               |
-| Bootable ISO                         | 🧪 Ideia    | —            | —            | Preparar estrutura modular exportável                 |
-| Integração de browser interno        | 🔜 Planeado| 02/10/2025   | 05/10/2025   | WebView2 para aceder à cloud e manter foco na app     |
-| Unificação de repositórios           | 🔜 Planeado| 05/10/2025   | 10/10/2025   | Perfil, site técnico, HydraDesktop                    |
-| Refatoração do site com Gulp/Jekyll | 🔜 Planeado| 10/10/2025   | 15/10/2025   | Modularidade, blog, navegação, publicação via NPM     |
-| Integração com conta cloud           | 🧪 Ideia    | —            | —            | Sincronização de dados, login OAuth                   |
-| Painel interativo de tarefas         | 🧪 Ideia    | —            | —            | Gantt tracking, lembretes, commit logs                |
+- [ ] Otimização do splash screen para reduzir flickering em máquinas com pouca RAM
+  - Ativar `DoubleBuffered` em painéis principais
+  - Dividir `Load` em etapas com `async` ou `Timer`
+  - Pré-carregar imagens em memória
+- [ ] Garantir conforto visual em todos os estados da janela (minimizada, restaurada, encerrada)
 
----
+## 🎶 HydraMonitor — Sistema com Alma
 
-## 🧠 Estado emocional e técnico
+- [ ] Criar sistema de monitorização de recursos (CPU/RAM) com mensagens estilo terminal
+- [ ] Reproduzir música correspondente ao estado emocional/técnico do utilizador
+- [ ] Exibir mensagens como se fossem conselhos de um amigo de longa data
 
-> [Carlos: fim de turno com clareza e visão]  
-→ Código limpo, modular e funcional.  
-→ Preparado para retomar com energia após jantar.  
-→ HydraDesktop está a ganhar alma, estilo e adaptabilidade.  
-→ Cada commit é um marco — técnico e pessoal.
+### 🎵 Playlist Temática: “Mensagens com alma para momentos de sobrecarga”
 
----
+| Situação                      | Mensagem Terminal                                                                 | Música Correspondente                        |
+|------------------------------|------------------------------------------------------------------------------------|----------------------------------------------|
+| CPU em 100%                  | HydraMonitor: O teu cérebro está a correr a 100%. O sistema também.               | *Under Pressure* – Queen & David Bowie       |
+| RAM quase esgotada           | HydraMonitor: A memória está cheia. Mas há espaço para ti.                        | *Memory* – Barbra Streisand                  |
+| Splash screen travada        | HydraMonitor: A beleza leva tempo. Estamos a carregar com elegância.             | *Patience* – Guns N' Roses                   |
+| Encerramento forçado         | HydraMonitor: Encerrando com dignidade. Até já.                                   | *The End* – The Doors                        |
+| Utilizador impaciente        | HydraMonitor: O tempo é teu aliado. Não o teu inimigo.                           | *Time* – Pink Floyd                          |
+| Rasgo criativo detectado     | HydraMonitor: Rasgo detectado. Ideias em ebulição. Regista antes que fujam.      | *Imagine* – John Lennon                      |
 
+## 🧭 Commit & Perfil
+
+- [ ] Adicionar `currentlyWorking.md` ao repositório de perfil com link para HydraLife
+- [ ] Atualizar `README.md` do perfil com referência ao progresso atual
+- [ ] Sincronizar commits entre HydraLife e perfil com mensagens poéticas
+
+## 🌀 Filosofia & Legado
+
+- [ ] Documentar lógica de janela e comportamento emocional no `HydraBlueprint.md`
+- [ ] Criar secção “Emotional Milestones” para registar rasgos criativos e momentos de superação
