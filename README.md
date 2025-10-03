@@ -64,6 +64,7 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 ```
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
+📁 HydraDesktop/
 ├── LICENSE
 📁 LifeCicles/
 │   ├── HydraLife.sln
