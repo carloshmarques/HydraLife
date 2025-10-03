@@ -204,6 +204,8 @@
     <None Include="Resources\493-4933495_close-button-png-transparent-image-close-icon-png1.png" />
     <None Include="Resources\493-4933495_close-button-png-transparent-image-close-icon-png.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

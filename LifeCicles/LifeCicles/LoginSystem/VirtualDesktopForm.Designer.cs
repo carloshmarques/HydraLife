@@ -252,7 +252,7 @@
             // 
             // panelTopBar
             // 
-            this.panelTopBar.BackColor = System.Drawing.Color.Transparent;
+            this.panelTopBar.BackColor = System.Drawing.Color.White;
             this.panelTopBar.Controls.Add(this.menuStrip1);
             this.panelTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopBar.Location = new System.Drawing.Point(0, 0);
@@ -262,7 +262,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Violet;
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -272,7 +272,7 @@
             this.toolStripTextBox1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(502, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(352, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 

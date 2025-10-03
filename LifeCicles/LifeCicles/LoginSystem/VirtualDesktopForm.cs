@@ -10,6 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 namespace LifeCicles.LoginSystem
 {
     /// <summary>
@@ -22,12 +23,36 @@ namespace LifeCicles.LoginSystem
         // Variáveis e métodos como MinimizeToTray, EnableDoubleBuffering, etc.
 
 
+        public class DimmedColorTable : ProfessionalColorTable
+    {
+            public override Color MenuBorder => Color.FromArgb(20, 25, 30);
+            public override Color MenuItemBorder => Color.FromArgb(60, 80, 70);
+           
+            public override Color ToolStripDropDownBackground => Color.FromArgb(20, 25, 30);
+            public override Color ImageMarginGradientBegin => Color.FromArgb(20, 25, 30);
+            public override Color ImageMarginGradientMiddle => Color.FromArgb(20, 25, 30);
+            public override Color ImageMarginGradientEnd => Color.FromArgb(20, 25, 30);
+
+            public override Color MenuItemSelected => Color.FromArgb(80, 120, 100); // Verde petróleo mais vivo
+
+        }
+
         #region Inicialização
         public VirtualDesktopForm()
         {
             InitializeComponent();
             this.Load += VirtualDesktopForm_Load;
             this.FormClosing += VirtualDesktopForm_FormClosing;
+        }
+        // ✅ Métodos de ação ligados no Form_Load
+        private void EndSession()
+        {
+            MessageBox.Show("Sessão encerrada com elegância.");
+        }
+
+        private void OpenTerminal()
+        {
+            MessageBox.Show("Terminal aberto.");
         }
 
 
@@ -98,141 +123,138 @@ namespace LifeCicles.LoginSystem
                 System.Reflection.BindingFlags.NonPublic,
                 null, control, new object[] { true });
         }
-       
+
 
         private void SetupTopBarControls()
         {
-            // Certifica-te de que o panelTopBar já foi inicializado antes de chamar esta função
-            if (panelTopBar == null)
-            {
-                MessageBox.Show("panelTopBar is not initialized.");
-                return;
-            }
-            ToolStripTextBox spacer = new ToolStripTextBox();
-            spacer.Width = this.Width - 150; // Calcula com base no tamanho da janela
-
-
-            spacer.BorderStyle = BorderStyle.None;
-            spacer.ReadOnly = true;
-            spacer.BackColor = Color.FromArgb(30, 30, 30); // Ou qualquer tom que combine com o fundo
-
-
-            spacer.Size = new Size(0, 0); // Opcional
-            spacer.AutoSize = false;
-            spacer.Width = 1000; // Empurra os itens para a direita
-            menuStrip1.Items.Add(spacer);
-            ToolStripButton btnTray = new ToolStripButton("—");
-            btnTray.ToolTipText = "Minimizar para a bandeja";
-            btnTray.Alignment = ToolStripItemAlignment.Right;
-
-            // Minimiza para bandeja
-            //btnTray.Click += (s, e) => MinimizeToTray();
-
-            // OU: apenas minimizar sem esconder
-            btnTray.Click += (s, e) => this.WindowState = FormWindowState.Minimized;
-
-            menuStrip1.Items.Add(btnTray);
-
-
+            time.Text = DateTime.Now.ToString("HH:mm");
+            pm.Text = DateTime.Now.ToString("tt");
+            pm.ForeColor = Color.White;
+            time.ForeColor = Color.White;
         }
-        private void VirtualDesktopForm_Resize(object sender, EventArgs e)
+
+        private void SetupPanelContent()
         {
-            panelTopBar.Width = this.Width;
-            leftSideTaskBar.Width = this.Width;
-            // Se quiseres que o menuStrip também se ajuste, podes adicionar:
-            // menuStrip1.Width = this.Width;
+            panelContent.Dock = DockStyle.Fill;
+            panelContent.BackColor = Color.FromArgb(20, 20, 30); // fundo técnico
+            panelContent.Padding = new Padding(10);
+            panelContent.BringToFront();
         }
+        private void SetupEventBindings()
+        {
+            btnCloseApp.Click += (s, e) => Application.Exit();
+            btnrestart.Click += (s, e) => Application.Restart();
+            btnEndSession.Click += (s, e) => EndSession();
+        }
+        private void SetupStyleModeLabel()
+        {
+            label1.Text = "Conky";
+            label1.ForeColor = Color.Yellow;
+        }
+     
+        private void SetupUserBadge()
+        {
+            PictureBox userPic = new PictureBox();
+            userPic.Image = Properties.Resources.img;
 
+            userPic.SizeMode = PictureBoxSizeMode.Zoom;
+            userPic.Size = new Size(32, 32);
+            userPic.BackColor = Color.Transparent;
+            userPic.Location = new Point(10, 5);
+
+            Label roleLabel = new Label();
+            roleLabel.Text = "admin";
+            roleLabel.ForeColor = Color.FromArgb(180, 255, 180);
+            roleLabel.Font = new Font("Consolas", 9, FontStyle.Regular);
+            roleLabel.BackColor = Color.Transparent;
+            roleLabel.Location = new Point(50, 10);
+
+            this.Controls.Add(userPic);
+            this.Controls.Add(roleLabel);
+        }
        
 
 
-
-
+        private void VirtualDesktopForm_Resize(object sender, EventArgs e)
+        {
+          
+        }
         private void VirtualDesktopForm_Load(object sender, EventArgs e)
         {
-            // 🖥️ Form setup
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            this.BackgroundImage = null;
-            this.BackColor = panelContent.BackColor;
 
-            // 🎨 Background panel
-            panelContent.Dock = DockStyle.Fill;
+            SetupFormStyle();           // Estilo geral do formulário
+            SetupBackground();          // Imagem de fundo e transparência
+            SetupMenuStrip();           // Topo técnico com botão Terminal
+            SetupSideBar();             // Branding lateral com HydraLogo
+            SetupTopBarControls();      // Relógio, ícones de sistema
+            SetupPanelContent();        // Painel central para módulos
+            SetupEventBindings();       // Eventos de botões (Shutdown, Restart, Settings)
+            SetupStyleModeLabel();      // Label decorativo com modo visual ativo
+                                        // ✅ Aplicar suavidade visual após estilo
+            EnableDoubleBuffering(panelContent);
+            EnableDoubleBuffering(panelTopBar);
+            EnableDoubleBuffering(panel1);
 
-            panelContent.BackgroundImage = Properties.Resources.material;
-            panelContent.BackgroundImageLayout = ImageLayout.Stretch;
-            panelContent.SendToBack();
-
-            // 🧭 MenuStrip setup
-            menuStrip1.Dock = DockStyle.Top;
-            menuStrip1.AutoSize = false;
-            menuStrip1.Height = 30; // Altura fixa
-                                    // NÃO definir Width manualmente
-
-            menuStrip1.BackColor = Color.FromArgb(128, 0, 0, 0); // Estilo translúcido
-            menuStrip1.RenderMode = ToolStripRenderMode.System;
-            menuStrip1.Parent = this; // Coloca diretamente no Form
-
-            menuStrip1.BringToFront();
-
-            // 🧱 TopBar setup
-            panelTopBar.Dock = DockStyle.Top;
-            panelTopBar.AutoSize = false;
-            panelTopBar.Height = 40; // Altura fixa
-            panelTopBar.BackColor = Color.Transparent;
-            panelTopBar.Parent = panelContent;
-
-            panelTopBar.BackColor = Color.Transparent;
-            panelTopBar.Parent = panelContent;
-
-            // 🧩 Left sidebar
-            leftSideTaskBar.Parent = panelContent;
-
-            leftSideTaskBar.Size = new Size(111, 922);
-            leftSideTaskBar.Location = new Point(0, panelTopBar.Bottom);
-            leftSideTaskBar.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            leftSideTaskBar.Dock = DockStyle.None;
-            leftSideTaskBar.BackColor = Color.Transparent;
             
-            // 👤 User icon and label
-            leftSideTaskBar.Controls.Add(pictureBoxUser);
-            leftSideTaskBar.Controls.Add(labelAdmin);
-            pictureBoxUser.Location = new Point(10, 5);
+        }
 
-            labelAdmin.Text = "admin";
-            labelAdmin.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+        private void SetupSideBar()
+        {
+            pictureBoxUser.BackgroundImage = Properties.Resources.img;
+            labelAdmin.Text = "username";
             labelAdmin.ForeColor = Color.White;
-            labelAdmin.BackColor = Color.Transparent;
-            labelAdmin.AutoSize = true;
-            labelAdmin.Location = new Point(pictureBoxUser.Left, pictureBoxUser.Top + 100);
-
-            // 🌫️ Fade-in effect
-            fadeTimer = new Timer();
-            fadeTimer.Interval = 30;
-            fadeTimer.Tick += (a, b) =>
-            {
-                this.Opacity += 0.05;
-                if (this.Opacity >= 1)
-                    fadeTimer.Stop();
-            };
-
-            // 🛎️ System tray icon
-
-
-
-            // 🧠 TopBar controls
-            SetupTopBarControls();
-
-            // 🧠 Resize logic (apenas se necessário)
-            this.Resize += VirtualDesktopForm_Resize;
         }
 
 
-         
+        private void SetupMenuStrip()
+        {
+            menuStrip1.BackColor = Color.White;
+            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.Items.Clear();
+
+            var terminalItem = new ToolStripMenuItem("Terminal");
+            terminalItem.Click += (s, e) => OpenTerminal();
+
+            var roleItem = new ToolStripMenuItem("Role");
+            var inputBox = new ToolStripTextBox { Text = "Text" };
+
+            menuStrip1.Items.Add(terminalItem);
+            menuStrip1.Items.Add(roleItem);
+            menuStrip1.Items.Add(inputBox);
+        }
+
+
+        private void LaunchTerminal()
+        {
+            // Placeholder técnico — substitui com lógica real depois
+            MessageBox.Show("Terminal lançado (em construção)", "HydraDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            
+        }
 
 
 
+    
 
+        private void SetupFormStyle()
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.WindowState = FormWindowState.Maximized;
+            this.BackColor = Color.Black;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+        private void SetupBackground()
+        {
+            this.BackgroundImage = Properties.Resources.material;
+            this.panelContent.BackColor = Color.Transparent;
+            this.panelContent.BackgroundImage = Properties.Resources.material;
+            this.panelContent.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+
+        #region Accidental  
+        // toques duplos de mouse ckick
         private void Panel4_Paint(object sender, PaintEventArgs e)
         {
 
@@ -265,3 +287,4 @@ namespace LifeCicles.LoginSystem
         }
     }
 }
+#endregion
