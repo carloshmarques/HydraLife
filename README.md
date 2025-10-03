@@ -69,6 +69,12 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   ├── HydraLife.sln
 │   📁 LifeCicles/
 │   │   ├── App.config
+│   │   📁 Assets/
+│   │   │   📁 Icons/
+│   │   │   │   ├── f50bd329929ff8f508e3983c7508b162.png
+│   │   │   │   ├── terminal.jpg
+│   │   │   │   ├── terminal.png
+│   │   │   │   ├── terminal.svg
 │   │   📁 Boot System/
 │   │   │   ├── Form1.Designer.cs
 │   │   │   ├── Form1.cs
