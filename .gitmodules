@@ -1,0 +1,3 @@
+[submodule "HydraDesktop"]
+	path = HydraDesktop
+	url = https://github.com/carloshmarques/HydraDesktop.git
