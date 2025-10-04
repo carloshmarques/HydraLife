@@ -73,105 +73,78 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 ```
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
-📁 HydraDesktop/
+├── HydraLife.sln
 ├── LICENSE
 📁 LifeCicles/
+│   ├── App.config
+│   📁 Assets/
+│   │   📁 Icons/
+│   │   │   ├── f50bd329929ff8f508e3983c7508b162.png
+│   │   │   ├── terminal.jpg
+│   │   │   ├── terminal.png
+│   │   │   ├── terminal.svg
+│   📁 Boot System/
+│   │   ├── SplashScreen.Designer.cs
+│   │   ├── SplashScreen.cs
+│   │   ├── SplashScreen.resx
+│   📁 Helpers/
+│   │   ├── BootSanitizer.cs
+│   │   ├── HydraRecovery.cs
+│   │   ├── PathValidator.cs
+│   │   ├── RescueSplashFunction.cs
+│   ├── HydraLife.csproj
+│   ├── HydraLife.csproj.user
 │   ├── HydraLife.sln
-│   📁 LifeCicles/
-│   │   ├── App.config
-│   │   📁 Assets/
-│   │   │   📁 Icons/
-│   │   │   │   ├── f50bd329929ff8f508e3983c7508b162.png
-│   │   │   │   ├── terminal.jpg
-│   │   │   │   ├── terminal.png
-│   │   │   │   ├── terminal.svg
-│   │   📁 Boot System/
-│   │   │   ├── Form1.Designer.cs
-│   │   │   ├── Form1.cs
-│   │   │   ├── Form1.resx
-│   │   ├── HydraLife.csproj
-│   │   ├── HydraLife.csproj.user
-│   │   📁 LoginSystem/
-│   │   │   ├── LoginForm.Designer.cs
-│   │   │   ├── LoginForm.cs
-│   │   │   ├── LoginForm.resx
-│   │   │   ├── LoginPanel.Designer.cs
-│   │   │   ├── LoginPanel.cs
-│   │   │   ├── LoginPanel.resx
-│   │   │   ├── VirtualDesktopForm.Designer.cs
-│   │   │   ├── VirtualDesktopForm.cs
-│   │   │   ├── VirtualDesktopForm.resx
-│   │   📁 Modules/
-│   │   │   📁 Functions/
-│   │   │   │   ├── ExButton.cs
-│   │   ├── Program.cs
-│   │   📁 Properties/
-│   │   │   ├── AssemblyInfo.cs
-│   │   │   ├── Resources.Designer.cs
-│   │   │   ├── Resources.resx
-│   │   │   ├── Settings.Designer.cs
-│   │   │   ├── Settings.settings
-│   │   📁 Resources/
-│   │   │   ├── 25706.png
-│   │   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png.png
-│   │   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png1.png
-│   │   │   ├── End messaging session.png
-│   │   │   ├── System reboot (1).png
-│   │   │   ├── System reboot (1)1.png
-│   │   │   ├── System reboot.png
-│   │   │   ├── Technical_Support.jpg
-│   │   │   ├── Tray arrow up.png
-│   │   │   ├── Window minimize.png
-│   │   │   ├── close.png
-│   │   │   ├── eu.jpg
-│   │   │   ├── hercaclitus.jpg
-│   │   │   ├── hercaclitus1.jpg
-│   │   │   ├── hercaclitus2.jpg
-│   │   │   ├── hercaclitus3.jpg
-│   │   │   ├── hydra.png
-│   │   │   ├── img.png
-│   │   │   ├── logout.png
-│   │   │   ├── material.png
-│   │   │   ├── power-button-off.png
-│   │   │   ├── power-on.png
-│   │   │   ├── reload.png
-│   │   │   ├── reset.png
-│   │   │   ├── switch.png
-│   │   │   ├── switch1.png
-│   │   │   ├── transferir.png
-│   │   │   ├── transferir1.png
-│   │   📁 bin/
-│   │   │   📁 Debug/
-│   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
-│   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
-│   │   │   │   ├── DocumentFormat.OpenXml.dll
-│   │   │   │   ├── DocumentFormat.OpenXml.xml
-│   │   │   │   ├── LifeCicles.exe
-│   │   │   │   ├── LifeCicles.exe.config
-│   │   │   │   ├── LifeCicles.pdb
-│   │   ├── hydra.ico
-│   │   📁 obj/
-│   │   │   📁 Debug/
-│   │   │   │   ├── DesignTimeResolveAssemblyReferences.cache
-│   │   │   │   ├── DesignTimeResolveAssemblyReferencesInput.cache
-│   │   │   │   ├── HydraLife.Form1.resources
-│   │   │   │   ├── HydraLife.csproj.AssemblyReference.cache
-│   │   │   │   ├── HydraLife.csproj.CoreCompileInputs.cache
-│   │   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
-│   │   │   │   ├── HydraLife.csproj.GenerateResource.cache
-│   │   │   │   ├── HydraLife.csproj.Up2Date
-│   │   │   │   ├── LifeCicles.Form1.resources
-│   │   │   │   ├── LifeCicles.Properties.Resources.resources
-│   │   │   │   ├── LifeCicles.csproj.AssemblyReference.cache
-│   │   │   │   ├── LifeCicles.csproj.CoreCompileInputs.cache
-│   │   │   │   ├── LifeCicles.csproj.FileListAbsolute.txt
-│   │   │   │   ├── LifeCicles.csproj.GenerateResource.cache
-│   │   │   │   ├── LifeCicles.exe
-│   │   │   │   ├── LifeCicles.exe.config
-│   │   │   │   ├── LifeCicles.pdb
-│   │   │   │   📁 TempPE/
-│   │   │   │   │   ├── Properties.Resources.Designer.cs.dll
-│   │   ├── packages.config
+│   📁 LoginSystem/
+│   │   ├── LoginForm.Designer.cs
+│   │   ├── LoginForm.cs
+│   │   ├── LoginForm.resx
+│   │   ├── LoginPanel.Designer.cs
+│   │   ├── LoginPanel.cs
+│   │   ├── LoginPanel.resx
+│   │   ├── VirtualDesktopForm.Designer.cs
+│   │   ├── VirtualDesktopForm.cs
+│   │   ├── VirtualDesktopForm.resx
+│   📁 Modules/
+│   │   📁 Functions/
+│   │   │   ├── ExButton.cs
+│   ├── Program.cs
+│   📁 Properties/
+│   │   ├── AssemblyInfo.cs
+│   │   ├── Resources.Designer.cs
+│   │   ├── Resources.resx
+│   │   ├── Settings.Designer.cs
+│   │   ├── Settings.settings
+│   📁 Resources/
+│   │   ├── 25706.png
+│   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png.png
+│   │   ├── 493-4933495_close-button-png-transparent-image-close-icon-png1.png
+│   │   ├── End messaging session.png
+│   │   ├── System reboot (1).png
+│   │   ├── System reboot (1)1.png
+│   │   ├── System reboot.png
+│   │   ├── Technical_Support.jpg
+│   │   ├── Tray arrow up.png
+│   │   ├── Window minimize.png
+│   │   ├── close.png
+│   │   ├── eu.jpg
+│   │   ├── hercaclitus.jpg
+│   │   ├── hercaclitus1.jpg
+│   │   ├── hercaclitus2.jpg
+│   │   ├── hercaclitus3.jpg
+│   │   ├── hydra.png
+│   │   ├── img.png
+│   │   ├── logout.png
+│   │   ├── material.png
+│   │   ├── power-button-off.png
+│   │   ├── power-on.png
+│   │   ├── reload.png
+│   │   ├── reset.png
+│   │   ├── switch.png
+│   │   ├── switch1.png
+│   │   ├── transferir.png
+│   │   ├── transferir1.png
+│   ├── hydra.ico
 │   📁 obj/
 │   │   📁 Debug/
 │   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
@@ -219,6 +192,7 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   │   │   │   📁 netstandard2.0/
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   ├── packages.config
 ├── README.md
 📁 Screenshots/
 │   ├── application_started.png
