@@ -90,3 +90,6 @@ Carlos é resiliente, filosófico, metacognitivo. Codifica com humor, precisão 
 - [ ] Integrar browser interno com WebView2
 - [ ] Refatorar site com Gulp, Jekyll, Pug
 - [ ] Consolidar filosofia no site
+
+---
+
