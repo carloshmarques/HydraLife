@@ -108,6 +108,15 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   📁 Modules/
 │   │   📁 Functions/
 │   │   │   ├── ExButton.cs
+│   │   📁 Helpers/
+│   │   │   ├── EmpathicPause.cs
+│   │   │   ├── HydraTerminal.cs
+│   │   📁 Lexicon/
+│   │   │   ├── HydraLexiconReporter.cs
+│   │   📁 Media/
+│   │   │   ├── HydraMediaLexicon.cs
+│   │   📁 Ui/
+│   │   │   ├── SplashScreenManager.cs
 │   ├── Program.cs
 │   📁 Properties/
 │   │   ├── AssemblyInfo.cs
@@ -202,6 +211,7 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 ├── changelog_changes.py
 ├── currentStatusGanttChart.md
 ├── generate_tree.py
+├── image.png
 ├── requirements.txt
 ├── tree_text
 ```
