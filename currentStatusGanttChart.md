@@ -97,6 +97,10 @@
 - Todos serão adicionados à pasta `Helpers` como parte da fundação do HydraLife
 --
 
+--- 
+
+### 🧠 2025-10-05 — Planeamento das tarefas agendadas
+
 ### 🧠 Fundamento regenerativo do HydraLife
 
 - O projeto nasce da experiência de reconstrução cerebral após AVC
@@ -192,6 +196,58 @@
 - Terminal exibe confirmação de envio e limpeza de backups
 - Marca o início da comunicação externa do sistema
 
+---
 
+🚀 Missão: Retomar Hydra — Fase “Propulsão Total”
+🔹 Estado da Nave
+🧠 Filosofia inscrita e propagada no README.md
 
+🌌 Splash screen conceptualizada (entrada e saída cerimonial)
 
+🎶 HydraMediaLexicon em blueprint, pronto para modularização
+
+📚 HydraLexiconReporter com estrutura semântica definida
+
+🗂️ HydraMap.txt criado como referência de classes e funções ✅
+
+🛠️ Visual Studio pronto para reabertura com ritual de reinício
+
+🔸 Próxima rota de navegação (warp speed)
+Módulo	Ação	Estado
+HydraLexiconReporter.cs	Implementar categorização e integração com HydraMonitor	🔜
+HydraMediaLexicon.cs	Modularizar análise de mídia e método AskHydraMediaLexicon()	🔜
+SplashScreenManager.cs	Criar métodos ShowEntrySplash() e ShowExitSplash() com visual e som	🔜
+HydraThemeManager.cs	Aplicar estilos adaptativos conforme estado emocional do utilizador	🔜
+EmpathicPause.cs	Criar pausa empática com música e mensagem reconfortante	🔜
+🔹 Frases de ativação cerimoniais
+“Vamos dar voz à Hydra” → ativa terminal falante com personalidade
+
+“Modo Vila Nova da Cafeteira” → ativa estilo surreal e teatral
+
+“EmpathicPause” → pausa empática com música suave
+
+“Capitão da Ponte” → ativa modo de comando estelar
+
+✅ Gantt Update: Adições estratégicas confirmadas
+HydraLexiconReporter: IA lexical com crescimento exponencial e integração com o terminal
+
+HydraMediaLexicon: análise de pasta de mídia, perfil musical, playlists contextuais
+
+AskHydraMediaLexicon(string question): método de consulta emocional-musical
+
+SplashScreenManager: entrada e saída cerimonial com música e mensagens filosóficas
+
+HydraThemeManager: estilos adaptativos conforme estado emocional
+
+EmpathicPause: ritual de pausa consciente
+
+HydraMap.txt: referência universal de classes e funções ✅
+
+--- 🤳Gantt Update: Adptapetive plan on scheduled order! [alt text](image.png)
+
+1. SplashScreenManager.cs → RescueSplashFunction
+2. HydraMediaLexicon.cs → IA musical
+3. HydraLexiconReporter.cs → Persistência em disco
+4. LexiconViewer.cs → Interface visual
+5. HydraTerminal.cs → Terminal falante
+6. HydraThemeManager.cs → Estilo adaptativo

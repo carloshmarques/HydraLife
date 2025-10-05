@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\helpers\\hydrarecovery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:helpers\\hydrarecovery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\helpers\\pathvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:helpers\\pathvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\helpers\\bootsanitizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:helpers\\bootsanitizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\helpers\\rescuesplashfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:helpers\\rescuesplashfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\modules\\helpers\\hydraterminal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:modules\\helpers\\hydraterminal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,54 +42,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BootSanitizer.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\BootSanitizer.cs",
-              "RelativeDocumentMoniker": "Helpers\\BootSanitizer.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\BootSanitizer.cs",
-              "RelativeToolTip": "Helpers\\BootSanitizer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T06:34:37.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HydraRecovery.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\HydraRecovery.cs",
-              "RelativeDocumentMoniker": "Helpers\\HydraRecovery.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\HydraRecovery.cs",
-              "RelativeToolTip": "Helpers\\HydraRecovery.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAuwH0AAAAAAAAAAAAAAA==",
+              "Title": "HydraTerminal.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\Helpers\\HydraTerminal.cs",
+              "RelativeDocumentMoniker": "Modules\\Helpers\\HydraTerminal.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\Helpers\\HydraTerminal.cs",
+              "RelativeToolTip": "Modules\\Helpers\\HydraTerminal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T06:34:36.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PathValidator.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\PathValidator.cs",
-              "RelativeDocumentMoniker": "Helpers\\PathValidator.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\PathValidator.cs",
-              "RelativeToolTip": "Helpers\\PathValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T06:34:34.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RescueSplashFunction.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\RescueSplashFunction.cs",
-              "RelativeDocumentMoniker": "Helpers\\RescueSplashFunction.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Helpers\\RescueSplashFunction.cs",
-              "RelativeToolTip": "Helpers\\RescueSplashFunction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T06:34:32.83Z",
+              "WhenOpened": "2025-10-05T01:14:15.685Z",
               "EditorCaption": ""
             }
           ]

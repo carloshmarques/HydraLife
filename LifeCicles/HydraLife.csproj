@@ -103,6 +103,11 @@
     <Compile Include="Modules\Functions\ExButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Modules\Helpers\EmpathicPause.cs" />
+    <Compile Include="Modules\Helpers\HydraTerminal.cs" />
+    <Compile Include="Modules\Lexicon\HydraLexiconReporter.cs" />
+    <Compile Include="Modules\Media\HydraMediaLexicon.cs" />
+    <Compile Include="Modules\Ui\SplashScreenManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Boot System\SplashScreen.resx">
