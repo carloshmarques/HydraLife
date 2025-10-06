@@ -2,13 +2,35 @@
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
-using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace LifeCicles.Helpers
 {
+
+
     internal class HydraRecovery
     {
+        public enum RecoveryState { Equilibrado, Sobrecarga, Desidratado, EmocionalmenteInstável, ProntoParaDançar }
+        public RecoveryState EstadoAtual { get; private set; } = RecoveryState.Equilibrado; public string Diagnosticar()
+        { 
+             var mensagem = "[HydraRecovery] Diagnóstico iniciado...\n";
+
+            if (DateTime.Now.Minute % 15 == 0)
+            { 
+                EstadoAtual = RecoveryState.Sobrecarga; mensagem += "[HydraRecovery] Breakpoint atingido. Sugestão: pausa cerimonial.\n"; }
+            else 
+           { 
+                EstadoAtual = RecoveryState.ProntoParaDançar; 
+                mensagem += "[HydraRecovery] Sistema em equilíbrio. Pronto para dançar.\n"; } 
+            return mensagem;
+        } 
+        public void RegistrarEvento(string evento) 
+        { 
+
+             Console.WriteLine($"[HydraRecovery] Evento registrado: {evento}"); 
+        }
+
+  
         public static void OnAppClose(RichTextBox terminal = null)
         {
             terminal?.AppendText("[HydraRecovery] Recursive analysis initiated...\n");
@@ -50,6 +72,7 @@ namespace LifeCicles.Helpers
             File.AppendAllText(recoveryReport, $"HydraRecovery Reopen Log\nDate: {DateTime.Now}\nRestored files:\n");
 
             string[] backupFiles = Directory.GetFiles(tempDir);
+
             foreach (string file in backupFiles)
             {
                 File.AppendAllText(recoveryReport, $"- {Path.GetFileName(file)}\n");
@@ -66,6 +89,11 @@ namespace LifeCicles.Helpers
                 File.Copy(report, destination, true);
                 terminal?.AppendText($"[HydraRecovery] Archived: {Path.GetFileName(report)}\n");
             }
+            var recovery = new HydraRecovery();
+            string diagnostico = recovery.Diagnosticar();
+            terminal.AppendText(diagnostico);
+
+            recovery.RegistrarEvento("Encerramento cerimonial da aplicação.");
         }
 
         public static void OnAppStart(Form mainForm, RichTextBox terminal = null)
@@ -120,6 +148,8 @@ namespace LifeCicles.Helpers
             Directory.Delete(tempDir, true);
             terminal?.AppendText("[HydraRecovery] Temporary backups cleared.\n");
         }
+
+
 
     }
 }
