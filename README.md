@@ -89,7 +89,6 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 <!-- Project tree starts here -->
 
 ```
-📁 Assets/
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
 ├── HydraLife.sln
@@ -253,7 +252,6 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 │   ├── shuting_down.png
 │   ├── shuting_down2.png
 ├── changelog_changes.py
-📁 dev/
 ├── generate_tree.py
 📁 plan/
 │   ├── Gantt.xlsx
