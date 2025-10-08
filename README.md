@@ -93,7 +93,6 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 <!-- Project tree starts here -->
 
 ```
-
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
 ├── HydraLife.sln
@@ -263,6 +262,7 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 │   ├── currentStatusGanttChart.md
 ├── requirements.txt
 ├── tree_text
+```
 
 <!-- Project tree ends here -->
 
