@@ -2,9 +2,9 @@
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
 ├── HydraLife.sln
+├── HydraMap.txt
 ├── LICENSE
 📁 LifeCicles/
-│   ├── App.config
 │   📁 Assets/
 │   │   📁 Icons/
 │   │   │   ├── f50bd329929ff8f508e3983c7508b162.png
@@ -83,43 +83,7 @@
 │   │   ├── switch1.png
 │   │   ├── transferir.png
 │   │   ├── transferir1.png
-│   📁 bin/
-│   │   📁 Debug/
-│   │   │   ├── DocumentFormat.OpenXml.Framework.dll
-│   │   │   ├── DocumentFormat.OpenXml.Framework.xml
-│   │   │   ├── DocumentFormat.OpenXml.dll
-│   │   │   ├── DocumentFormat.OpenXml.xml
-│   │   │   ├── LifeCicles.exe
-│   │   │   ├── LifeCicles.exe.config
-│   │   │   ├── LifeCicles.pdb
-│   │   │   ├── System.IO.Ports.dll
-│   │   │   ├── System.IO.Ports.xml
-│   │   📁 Release/
 │   ├── hydra.ico
-│   📁 obj/
-│   │   📁 Debug/
-│   │   │   ├── DesignTimeResolveAssemblyReferences.cache
-│   │   │   ├── DesignTimeResolveAssemblyReferencesInput.cache
-│   │   │   ├── HydraLife.SplashScreen.resources
-│   │   │   ├── HydraLife.csproj.AssemblyReference.cache
-│   │   │   ├── HydraLife.csproj.CoreCompileInputs.cache
-│   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
-│   │   │   ├── HydraLife.csproj.GenerateResource.cache
-│   │   │   ├── HydraLife.csproj.Up2Date
-│   │   │   ├── LifeCicles.Boot_System.LoginForm.resources
-│   │   │   ├── LifeCicles.Form1.resources
-│   │   │   ├── LifeCicles.LoginSystem.LoginPanel.resources
-│   │   │   ├── LifeCicles.LoginSystem.VirtualDesktopForm.resources
-│   │   │   ├── LifeCicles.Properties.Resources.resources
-│   │   │   ├── LifeCicles.csproj.AssemblyReference.cache
-│   │   │   ├── LifeCicles.csproj.CoreCompileInputs.cache
-│   │   │   ├── LifeCicles.csproj.FileListAbsolute.txt
-│   │   │   ├── LifeCicles.csproj.GenerateResource.cache
-│   │   │   ├── LifeCicles.exe
-│   │   │   ├── LifeCicles.exe.config
-│   │   │   ├── LifeCicles.pdb
-│   │   │   📁 TempPE/
-│   │   │   │   ├── Properties.Resources.Designer.cs.dll
 │   📁 packages/
 │   │   📁 DocumentFormat.OpenXml.3.3.0/
 │   │   │   ├── DocumentFormat.OpenXml.3.3.0.nupkg
@@ -127,19 +91,14 @@
 │   │   │   ├── icon.png
 │   │   │   📁 lib/
 │   │   │   │   📁 net35/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 net40/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 net46/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 net8.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 netstandard2.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   📁 DocumentFormat.OpenXml.Framework.3.3.0/
 │   │   │   ├── DocumentFormat.OpenXml.Framework.3.3.0.nupkg
@@ -147,22 +106,16 @@
 │   │   │   ├── icon.png
 │   │   │   📁 lib/
 │   │   │   │   📁 net35/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net40/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net46/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net6.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net8.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 netstandard2.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   📁 System.IO.Ports.9.0.9/
 │   │   │   ├── Icon.png
@@ -181,36 +134,27 @@
 │   │   │   │   │   ├── System.IO.Ports.targets
 │   │   │   📁 lib/
 │   │   │   │   📁 net462/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 net8.0/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 net9.0/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 netstandard2.0/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   📁 runtimes/
 │   │   │   │   📁 unix/
 │   │   │   │   │   📁 lib/
 │   │   │   │   │   │   📁 net8.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   │   │   📁 net9.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 win/
 │   │   │   │   │   📁 lib/
 │   │   │   │   │   │   📁 net8.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   │   │   📁 net9.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   ├── useSharedDesignerContext.txt
-│   ├── packages.config
 ├── README.md
 📁 Screenshots/
 │   ├── application_started.png
@@ -218,10 +162,10 @@
 │   ├── shuting_down.png
 │   ├── shuting_down2.png
 ├── changelog_changes.py
-├── currentStatusGanttChart.md
 📁 dev/
 ├── generate_tree.py
 📁 plan/
 │   ├── Gantt.xlsx
+│   ├── currentStatusGanttChart.md
 ├── requirements.txt
 ├── tree_text

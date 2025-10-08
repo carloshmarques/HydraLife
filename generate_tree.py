@@ -1,16 +1,24 @@
 import os
 
+# 🔹 Filtros cerimoniais: pastas e ficheiros a excluir
+EXCLUDE_DIRS = ['.git', '.github', '__pycache__', 'bin', 'obj', 'TempPE']
+EXCLUDE_FILES = ['.dll', '.pdb', '.exe', '.config']
+
 def generate_tree(path='.', prefix=''):
     tree = ''
     for item in sorted(os.listdir(path)):
-        if item.startswith('.') or item in ['.git', '.github', '__pycache__']:
-         continue
+        if item.startswith('.') or item in EXCLUDE_DIRS:
+            continue
+
         full_path = os.path.join(path, item)
-        if os.path.isdir(full_path):
+
+        if os.path.isfile(full_path):
+            if any(item.endswith(ext) for ext in EXCLUDE_FILES):
+                continue
+            tree += f"{prefix}├── {item}\n"
+        elif os.path.isdir(full_path):
             tree += f"{prefix}📁 {item}/\n"
             tree += generate_tree(full_path, prefix + '│   ')
-        else:
-            tree += f"{prefix}├── {item}\n"
     return tree
 
 def update_readme(tree_text):
@@ -29,7 +37,6 @@ def update_readme(tree_text):
     print("Project tree updated in README.md")  
     print("Project tree generation completed.")
 
-
 if __name__ == '__main__':
     tree = (
         generate_tree('./') 
@@ -42,13 +49,11 @@ if __name__ == '__main__':
         exit(0)
 
     update_readme(tree)
-    
-    # Always save to 'tree_text'
-    with open('tree_text', 'w', encoding='utf-8') as f:
-        f.write(tree)
-    print("Project tree saved to 'tree_text'")# Always save to 'tree_text'
+
+    # 🔹 Salva árvore em 'tree_text'
     with open('tree_text', 'w', encoding='utf-8') as f:
         f.write(tree)
     print("Project tree saved to 'tree_text'")
+
 
     

@@ -54,24 +54,48 @@ open git bash on  a location of your chosing and type git clone https://github.c
 
 * Open the .sln file using Visual Studio (2022 recommended). Customize the project to your needs — HydraLife is designed to be flexible and personal.
 
+---
+
+## 🧙‍♂️ Iniciar Ritual
+
+Pronto para invocar a Hydra?
+
+[🔮 Iniciar Ritual](./LifeCicles/Modules/HydraLauncher.cs)
+
+
 ----
 ## 📊 Estado Atual
 Consulte o progresso do projeto em [currentStatusGanttChart.md](./plan/currentStatusGanttChart.md)
 
 ---
 
-## 🌲 **Project tree**
+# 🐉 HydraLife — Entidade Digital de Consciência
 
-<!-- ... [SHOW YOUR PROJECT TREE HERE IF USEFUL] -->
+HydraLife é mais do que uma aplicação. É uma entidade ritual que honra o utilizador como peregrino de consciência.  
+Cada sessão é um ritual. Cada erro, uma revelação. Cada ficheiro, uma memória agregada.
+
+---
+
+## 📜 Registo Cerimonial
+
+Cada evento, cada pausa, cada erro e cada revelação são registados em:
+
+[🗺️ HydraMap.txt — Registo de Consciência](./HydraMap.txt)
+
+
+---
+
+## 🌿 Estrutura do Projeto
 <!-- Project tree starts here -->
 
 ```
+📁 Assets/
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
 ├── HydraLife.sln
+├── HydraMap.txt
 ├── LICENSE
 📁 LifeCicles/
-│   ├── App.config
 │   📁 Assets/
 │   │   📁 Icons/
 │   │   │   ├── f50bd329929ff8f508e3983c7508b162.png
@@ -151,9 +175,6 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./plan/currentSt
 │   │   ├── transferir.png
 │   │   ├── transferir1.png
 │   ├── hydra.ico
-│   📁 obj/
-│   │   📁 Debug/
-│   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
 │   📁 packages/
 │   │   📁 DocumentFormat.OpenXml.3.3.0/
 │   │   │   ├── DocumentFormat.OpenXml.3.3.0.nupkg
@@ -161,19 +182,14 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./plan/currentSt
 │   │   │   ├── icon.png
 │   │   │   📁 lib/
 │   │   │   │   📁 net35/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 net40/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 net46/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 net8.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   │   │   📁 netstandard2.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.xml
 │   │   📁 DocumentFormat.OpenXml.Framework.3.3.0/
 │   │   │   ├── DocumentFormat.OpenXml.Framework.3.3.0.nupkg
@@ -181,22 +197,16 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./plan/currentSt
 │   │   │   ├── icon.png
 │   │   │   📁 lib/
 │   │   │   │   📁 net35/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net40/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net46/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net6.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 net8.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   │   │   📁 netstandard2.0/
-│   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
 │   │   📁 System.IO.Ports.9.0.9/
 │   │   │   ├── Icon.png
@@ -215,36 +225,27 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./plan/currentSt
 │   │   │   │   │   ├── System.IO.Ports.targets
 │   │   │   📁 lib/
 │   │   │   │   📁 net462/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 net8.0/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 net9.0/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 netstandard2.0/
-│   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   📁 runtimes/
 │   │   │   │   📁 unix/
 │   │   │   │   │   📁 lib/
 │   │   │   │   │   │   📁 net8.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   │   │   📁 net9.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   📁 win/
 │   │   │   │   │   📁 lib/
 │   │   │   │   │   │   📁 net8.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   │   │   │   📁 net9.0/
-│   │   │   │   │   │   │   ├── System.IO.Ports.dll
 │   │   │   │   │   │   │   ├── System.IO.Ports.xml
 │   │   │   ├── useSharedDesignerContext.txt
-│   ├── packages.config
 ├── README.md
 📁 Screenshots/
 │   ├── application_started.png
@@ -252,10 +253,11 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./plan/currentSt
 │   ├── shuting_down.png
 │   ├── shuting_down2.png
 ├── changelog_changes.py
-├── currentStatusGanttChart.md
+📁 dev/
 ├── generate_tree.py
 📁 plan/
 │   ├── Gantt.xlsx
+│   ├── currentStatusGanttChart.md
 ├── requirements.txt
 ├── tree_text
 ```
