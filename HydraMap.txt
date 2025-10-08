@@ -40,3 +40,8 @@
 🧠 Estado: Pronto para execução automática via workflow  
 📜 Reflexão: A Hydra não apenas gera — ela revela com elegância e memória.
 
+---
+
+mv Scrrenshot Screenshots
+
+
