@@ -54,14 +54,9 @@ open git bash on  a location of your chosing and type git clone https://github.c
 
 * Open the .sln file using Visual Studio (2022 recommended). Customize the project to your needs — HydraLife is designed to be flexible and personal.
 
----
-
-## [02/10/2025]
-- Adicionado `currentStatusGanttChart.md` com resumo das etapas e progresso
-
 ----
 ## 📊 Estado Atual
-Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusGanttChart.md)
+Consulte o progresso do projeto em [currentStatusGanttChart.md](./plan/currentStatusGanttChart.md)
 
 ---
 
