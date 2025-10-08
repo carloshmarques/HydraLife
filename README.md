@@ -86,9 +86,14 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 ---
 
 ## 🌿 Estrutura do Projeto
+
+<details>
+  <summary>Clique para expandir a árvore cerimonial</summary>
+
 <!-- Project tree starts here -->
 
 ```
+
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
 ├── HydraLife.sln
@@ -258,9 +263,12 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 │   ├── currentStatusGanttChart.md
 ├── requirements.txt
 ├── tree_text
-```
 
 <!-- Project tree ends here -->
+
+```
+</details>
+
 ---
 
 ## 📝 **Additional notes**
@@ -269,18 +277,22 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 
 ---
 
-## 📸 **Screenshots**
+## 📸 Screenshots
 
-<!-- ... [SOME DESCRIPTIVE IMAGES] -->
-## At this point in time we are currentely developing splah screen that mimics windows 8.1 bootloader and chekfile system linux style terminal output linux style also.
-<div align="center"> 
+<details>
+  <summary>Clique para ver as capturas cerimoniais</summary>
 
-<img src="Screenshots/application_started.png" alt="Boot screen showing application starting" title=" Application starting" width="300"/>
-<img src="Screenshots/check_files_emulator.png" alt="Boot screen showing file check" title="Boot screen showing file check" width="300"/>
-<img src="Screenshots/shuting_down.png" alt="Boot screen showing application shuting down." title=" Application Shut down" width="300"/>
-<img src="Screenshots/shuting_down2.png" alt="Boot screen showing application shuting down" title="Application Shut down" width="300"/>
+  <p>Estamos atualmente a desenvolver uma splash screen que mimetiza o bootloader do Windows 8.1 e saída terminal estilo Linux.</p>
 
-</div>
+  <div align="center"> 
+    <img src="Screenshots/application_started.png" width="300"/>
+    <img src="Screenshots/check_files_emulator.png" width="300"/>
+    <img src="Screenshots/shuting_down.png" width="300"/>
+    <img src="Screenshots/shuting_down2.png" width="300"/>
+  </div>
+
+
+</details>
 
 ---
 
