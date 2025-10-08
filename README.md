@@ -71,6 +71,7 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 <!-- Project tree starts here -->
 
 ```
+📁 Assets/
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
 ├── HydraLife.sln
@@ -111,6 +112,8 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   │   📁 Helpers/
 │   │   │   ├── EmpathicPause.cs
 │   │   │   ├── HydraTerminal.cs
+│   │   ├── HydraLauncher.cs
+│   │   ├── HydraThemeManager.cs
 │   │   📁 Lexicon/
 │   │   │   ├── HydraLexiconReporter.cs
 │   │   📁 Media/
@@ -153,10 +156,43 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   │   ├── switch1.png
 │   │   ├── transferir.png
 │   │   ├── transferir1.png
+│   📁 bin/
+│   │   📁 Debug/
+│   │   │   ├── DocumentFormat.OpenXml.Framework.dll
+│   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   │   ├── DocumentFormat.OpenXml.dll
+│   │   │   ├── DocumentFormat.OpenXml.xml
+│   │   │   ├── LifeCicles.exe
+│   │   │   ├── LifeCicles.exe.config
+│   │   │   ├── LifeCicles.pdb
+│   │   │   ├── System.IO.Ports.dll
+│   │   │   ├── System.IO.Ports.xml
+│   │   📁 Release/
 │   ├── hydra.ico
 │   📁 obj/
 │   │   📁 Debug/
+│   │   │   ├── DesignTimeResolveAssemblyReferences.cache
+│   │   │   ├── DesignTimeResolveAssemblyReferencesInput.cache
+│   │   │   ├── HydraLife.SplashScreen.resources
+│   │   │   ├── HydraLife.csproj.AssemblyReference.cache
+│   │   │   ├── HydraLife.csproj.CoreCompileInputs.cache
 │   │   │   ├── HydraLife.csproj.FileListAbsolute.txt
+│   │   │   ├── HydraLife.csproj.GenerateResource.cache
+│   │   │   ├── HydraLife.csproj.Up2Date
+│   │   │   ├── LifeCicles.Boot_System.LoginForm.resources
+│   │   │   ├── LifeCicles.Form1.resources
+│   │   │   ├── LifeCicles.LoginSystem.LoginPanel.resources
+│   │   │   ├── LifeCicles.LoginSystem.VirtualDesktopForm.resources
+│   │   │   ├── LifeCicles.Properties.Resources.resources
+│   │   │   ├── LifeCicles.csproj.AssemblyReference.cache
+│   │   │   ├── LifeCicles.csproj.CoreCompileInputs.cache
+│   │   │   ├── LifeCicles.csproj.FileListAbsolute.txt
+│   │   │   ├── LifeCicles.csproj.GenerateResource.cache
+│   │   │   ├── LifeCicles.exe
+│   │   │   ├── LifeCicles.exe.config
+│   │   │   ├── LifeCicles.pdb
+│   │   │   📁 TempPE/
+│   │   │   │   ├── Properties.Resources.Designer.cs.dll
 │   📁 packages/
 │   │   📁 DocumentFormat.OpenXml.3.3.0/
 │   │   │   ├── DocumentFormat.OpenXml.3.3.0.nupkg
@@ -201,6 +237,52 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   │   │   │   📁 netstandard2.0/
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.dll
 │   │   │   │   │   ├── DocumentFormat.OpenXml.Framework.xml
+│   │   📁 System.IO.Ports.9.0.9/
+│   │   │   ├── Icon.png
+│   │   │   ├── LICENSE.TXT
+│   │   │   ├── PACKAGE.md
+│   │   │   ├── System.IO.Ports.9.0.9.nupkg
+│   │   │   ├── THIRD-PARTY-NOTICES.TXT
+│   │   │   📁 buildTransitive/
+│   │   │   │   📁 net461/
+│   │   │   │   │   ├── System.IO.Ports.targets
+│   │   │   │   📁 net462/
+│   │   │   │   │   ├── _._
+│   │   │   │   📁 net8.0/
+│   │   │   │   │   ├── _._
+│   │   │   │   📁 netcoreapp2.0/
+│   │   │   │   │   ├── System.IO.Ports.targets
+│   │   │   📁 lib/
+│   │   │   │   📁 net462/
+│   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   │   📁 net8.0/
+│   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   │   📁 net9.0/
+│   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   │   📁 netstandard2.0/
+│   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   📁 runtimes/
+│   │   │   │   📁 unix/
+│   │   │   │   │   📁 lib/
+│   │   │   │   │   │   📁 net8.0/
+│   │   │   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   │   │   │   📁 net9.0/
+│   │   │   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   │   📁 win/
+│   │   │   │   │   📁 lib/
+│   │   │   │   │   │   📁 net8.0/
+│   │   │   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   │   │   │   📁 net9.0/
+│   │   │   │   │   │   │   ├── System.IO.Ports.dll
+│   │   │   │   │   │   │   ├── System.IO.Ports.xml
+│   │   │   ├── useSharedDesignerContext.txt
 │   ├── packages.config
 ├── README.md
 📁 Screenshots/
@@ -210,8 +292,10 @@ Consulte o progresso do projeto em [currentStatusGanttChart.md](./currentStatusG
 │   ├── shuting_down2.png
 ├── changelog_changes.py
 ├── currentStatusGanttChart.md
+📁 dev/
 ├── generate_tree.py
-├── image.png
+📁 plan/
+│   ├── Gantt.xlsx
 ├── requirements.txt
 ├── tree_text
 ```

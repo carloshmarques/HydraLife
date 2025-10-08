@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LifeCicles.Modules;
+using System;
 using System.Windows.Forms;
 
 namespace LifeCicles
@@ -7,21 +8,32 @@ namespace LifeCicles
     {
         /// <summary>
         /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+
+      
+        public class HydraLauncher : Form
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+     
+            public HydraLauncher()
+            {
+                // Inicialização cerimonial da janela
+                Text = "🌀 HydraLauncher";
+                Width = 800;
+                Height = 600;
 
-            // TEMPORARY: Launch Hydra Desktop directly
-            Application.Run(new HydraLife.SplashScreen());
+            }
+            [STAThread]
 
+            static void Main()
+            {
+              
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
 
-        }
+                // Invocação cerimonial da Hydra
+                Application.Run(new HydraLauncher());
+            }
+        }          
+        
     }
 }

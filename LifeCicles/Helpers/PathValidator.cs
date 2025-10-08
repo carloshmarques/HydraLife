@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 namespace LifeCicles.Helpers
 {
     public static class PathValidator
@@ -21,7 +23,7 @@ namespace LifeCicles.Helpers
                 terminal?.AppendText($"[PathValidator] OK: {path}\n");
             }
         }
-    }
+    
 
     public static void ValidateMultiplePaths(string[] paths, RichTextBox terminal = null)
         {

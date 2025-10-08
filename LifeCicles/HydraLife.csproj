@@ -59,6 +59,9 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Ports, Version=9.0.0.9, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Ports.9.0.9\lib\net462\System.IO.Ports.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -105,6 +108,8 @@
     </Compile>
     <Compile Include="Modules\Helpers\EmpathicPause.cs" />
     <Compile Include="Modules\Helpers\HydraTerminal.cs" />
+    <Compile Include="Modules\HydraLauncher.cs" />
+    <Compile Include="Modules\HydraThemeManager.cs" />
     <Compile Include="Modules\Lexicon\HydraLexiconReporter.cs" />
     <Compile Include="Modules\Media\HydraMediaLexicon.cs" />
     <Compile Include="Modules\Ui\SplashScreenManager.cs" />
@@ -127,6 +132,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

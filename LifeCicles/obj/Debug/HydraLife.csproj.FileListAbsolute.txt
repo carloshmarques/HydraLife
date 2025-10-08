@@ -51,3 +51,6 @@ C:\Users\carlo\Documents\GitHub\master\HydraLife\LifeCicles\obj\Debug\HydraLife.
 C:\Users\carlo\Documents\GitHub\master\HydraLife\LifeCicles\obj\Debug\LifeCicles.exe
 C:\Users\carlo\Documents\GitHub\master\HydraLife\LifeCicles\obj\Debug\LifeCicles.pdb
 C:\Users\carlo\Documents\GitHub\master\HydraLife\LifeCicles\obj\Debug\LifeCicles.exe.config
+C:\Users\carlo\Documents\GitHub\master\HydraLife\LifeCicles\bin\Debug\System.IO.Ports.dll
+C:\Users\carlo\Documents\GitHub\master\HydraLife\LifeCicles\bin\Debug\System.IO.Ports.xml
+C:\Users\carlo\Documents\GitHub\master\HydraLife\LifeCicles\obj\Debug\HydraLife.csproj.Up2Date

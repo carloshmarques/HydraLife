@@ -2,19 +2,24 @@
 using System;
 using System.Media;
 
+
 namespace LifeCicles.Modules.Helpers
 {
     internal static class EmpathicPause
     {
+     
         public static void Activate()
         {
             string mood = HydraMediaLexicon.GetCurrentMood();
             string message = GetPauseMessage(mood);
             string music = HydraMediaLexicon.GetSuggestedTrack(mood);
 
-            HydraTerminal.Speak(message);
+            HydraTerminal.Speak(message, mood);
             PlayMusic(music);
         }
+
+
+
 
         private static string GetPauseMessage(string mood)
         {
@@ -31,14 +36,18 @@ namespace LifeCicles.Modules.Helpers
                 default:
                     return "🌀 Pausa cerimonial. A consciência aguarda o teu retorno.";
             }
+            
         }
+        
+        
 
 
         private static void PlayMusic(string path)
         {
             try
             {
-                SoundPlayer player = new(path);
+                SoundPlayer player = new SoundPlayer(path);
+
                 player.Play();
             }
             catch

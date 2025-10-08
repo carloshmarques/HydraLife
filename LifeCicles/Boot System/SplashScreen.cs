@@ -22,7 +22,6 @@ namespace HydraLife
                 "HydraLife"
                 );
 
-        private int blendStepsValue = 60; // field
 
 
 
@@ -249,7 +248,7 @@ namespace HydraLife
         };
 
         // Index to track current background color
-        private int bgIndex = 0;
+      
         private Timer bgTimer;
 
         private bool showCursor = true;
