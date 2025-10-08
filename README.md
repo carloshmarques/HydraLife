@@ -266,7 +266,7 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 
 <!-- Project tree ends here -->
 
-```
+
 </details>
 
 ---
@@ -281,7 +281,7 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 
 <details>
   <summary>Clique para ver as capturas cerimoniais</summary>
-
+```
   <p>Estamos atualmente a desenvolver uma splash screen que mimetiza o bootloader do Windows 8.1 e saída terminal estilo Linux.</p>
 
   <div align="center"> 
@@ -291,7 +291,7 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
     <img src="Screenshots/shuting_down2.png" width="300"/>
   </div>
 
-
+``
 </details>
 
 ---
