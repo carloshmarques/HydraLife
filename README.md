@@ -128,6 +128,9 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 │   │   ├── VirtualDesktopForm.cs
 │   │   ├── VirtualDesktopForm.resx
 │   📁 Modules/
+│   │   📁 Ceremony/
+│   │   │   ├── HydraMoodCycler.cs
+│   │   │   ├── HydraSpirit.cs
 │   │   📁 Functions/
 │   │   │   ├── ExButton.cs
 │   │   📁 Helpers/
