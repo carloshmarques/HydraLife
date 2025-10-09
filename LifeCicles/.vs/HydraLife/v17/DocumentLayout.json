@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\boot system\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:boot system\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\modules\\media\\hydramedialexicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:modules\\media\\hydramedialexicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\boot system\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:boot system\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\modules\\lexicon\\hydralexiconreporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:modules\\lexicon\\hydralexiconreporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\boot system\\splashscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:boot system\\splashscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\modules\\ui\\splashscreenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:modules\\ui\\splashscreenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\modules\\hydralauncher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:modules\\hydralauncher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\modules\\hydrathememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:modules\\hydrathememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\boot system\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:boot system\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|c:\\users\\carlo\\documents\\github\\master\\hydralife\\lifecicles\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C11D2EE-E929-48A2-9A47-0C2B60EB332E}|HydraLife.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,54 +58,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "SplashScreen.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Boot System\\SplashScreen.Designer.cs",
+              "RelativeDocumentMoniker": "Boot System\\SplashScreen.Designer.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Boot System\\SplashScreen.Designer.cs",
+              "RelativeToolTip": "Boot System\\SplashScreen.Designer.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T22:04:25.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SplashScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Boot System\\SplashScreen.cs",
+              "RelativeDocumentMoniker": "Boot System\\SplashScreen.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Boot System\\SplashScreen.cs [Design]",
+              "RelativeToolTip": "Boot System\\SplashScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T21:19:09.444Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-07T13:34:52.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HydraMediaLexicon.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\Media\\HydraMediaLexicon.cs",
-              "RelativeDocumentMoniker": "Modules\\Media\\HydraMediaLexicon.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\Media\\HydraMediaLexicon.cs",
-              "RelativeToolTip": "Modules\\Media\\HydraMediaLexicon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T13:34:47.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HydraLexiconReporter.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\Lexicon\\HydraLexiconReporter.cs",
-              "RelativeDocumentMoniker": "Modules\\Lexicon\\HydraLexiconReporter.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\Lexicon\\HydraLexiconReporter.cs",
-              "RelativeToolTip": "Modules\\Lexicon\\HydraLexiconReporter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T13:34:43.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "SplashScreen.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Boot System\\SplashScreen.cs",
               "RelativeDocumentMoniker": "Boot System\\SplashScreen.cs",
               "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Boot System\\SplashScreen.cs",
               "RelativeToolTip": "Boot System\\SplashScreen.cs",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAWwPoAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAABEBAAAAAAAAAAAswBcBAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T13:13:32.007Z"
+              "WhenOpened": "2025-10-07T13:13:32.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -123,35 +115,9 @@
               "RelativeDocumentMoniker": "Modules\\Ui\\SplashScreenManager.cs",
               "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\Ui\\SplashScreenManager.cs",
               "RelativeToolTip": "Modules\\Ui\\SplashScreenManager.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAMwC8AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAhwF0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-07T12:58:55.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HydraThemeManager.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\HydraThemeManager.cs",
-              "RelativeDocumentMoniker": "Modules\\HydraThemeManager.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\HydraThemeManager.cs",
-              "RelativeToolTip": "Modules\\HydraThemeManager.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T12:58:45.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HydraLauncher.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\HydraLauncher.cs",
-              "RelativeDocumentMoniker": "Modules\\HydraLauncher.cs",
-              "ToolTip": "C:\\Users\\carlo\\Documents\\GitHub\\master\\HydraLife\\LifeCicles\\Modules\\HydraLauncher.cs",
-              "RelativeToolTip": "Modules\\HydraLauncher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T12:58:40.064Z",
               "EditorCaption": ""
             }
           ]

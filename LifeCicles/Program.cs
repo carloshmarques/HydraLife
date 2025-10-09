@@ -1,9 +1,12 @@
-﻿using LifeCicles.Modules;
+﻿using LifeCicles.Boot_System;
+using LifeCicles.Modules;
+using LifeCicles.Modules.UI;
 using System;
 using System.Windows.Forms;
+using HydraLife;
 
-namespace LifeCicles
-{
+namespace LifeCicles.Boot_System
+{ 
     internal static class Program
     {
         /// <summary>
@@ -31,9 +34,10 @@ namespace LifeCicles
                 Application.SetCompatibleTextRenderingDefault(false);
 
                 // Invocação cerimonial da Hydra
-                Application.Run(new HydraLauncher());
+                Application.Run(new SplashScreen());
             }
         }          
         
     }
 }
+

@@ -93,13 +93,6 @@ namespace LifeCicles.Modules.UI
         public string MusicPath { get; set; }
         public SplashVisual VisualStyle { get; set; }
 
-        public void Show()
-        {
-            // Aplicar estilo visual
-            // Reproduzir música cerimonial
-            // Exibir mensagem com animação
-            Console.WriteLine($"🎶 Splash: {Message} [{VisualStyle}]");
-        }
     }
 }
 

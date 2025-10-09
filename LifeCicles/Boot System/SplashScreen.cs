@@ -1,11 +1,17 @@
 ﻿
+using HydraLife;
 using LifeCicles.Boot_System;
+using LifeCicles.Modules;
+using LifeCicles.Modules.Helpers;
+using LifeCicles.Modules.Lexicon;
+using LifeCicles.Modules.UI;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 
 namespace HydraLife
@@ -16,6 +22,7 @@ namespace HydraLife
 
 
         private string startTimeFormatted; // ✅ Only here
+        private Timer logoSlide;
 
         public static string HydraDataPath =>
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
@@ -270,20 +277,56 @@ namespace HydraLife
         
         private async void Form1_Load(object sender, EventArgs e)
         {
-          
-            PictureBox2.Location = new Point(-100, 150); // mais abaixo
-            bootMessagesRtb.Location = new Point(20, 20);
-            bootMessagesRtb.Height = 120; // fixa a altura
-            bootMessagesRtb.ScrollBars = RichTextBoxScrollBars.None;
+           
 
-            Timer logoSlide = new Timer { Interval = 10 };
+            PictureBox2.Location = new Point(
+            (this.ClientSize.Width - PictureBox2.Width) / 2,
+            (this.ClientSize.Height - PictureBox2.Height) / 2
+            );
+
+           
+
+            PictureBox2.Anchor = AnchorStyles.None;
+            PictureBox2.BackColor = Color.Transparent;
+            PictureBox2.BorderStyle = BorderStyle.None;
+            PictureBox2.Size = new Size(200, 200); // ajusta conforme estética desejada
+            PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            int terminalTop = PictureBox2.Bottom + 20;
+            int terminalFixedTop = 400; // ajusta conforme estética desejada
+            bootMessagesRtb.Size = new Size(700, 250); // ou 600, conforme estética desejada
+            bootMessagesRtb.Location = new Point(
+                (this.ClientSize.Width - bootMessagesRtb.Width) / 2,
+              terminalFixedTop
+            );
+
+
+            PictureBox2.Image = LifeCicles.Properties.Resources.hydra;
+            PictureBox2.BackColor = Color.Transparent;
+            PictureBox2.BorderStyle = BorderStyle.None;
+            PictureBox2.Anchor = AnchorStyles.None;
+            PictureBox2.Visible = true;
+            PictureBox2.BringToFront();
+            /*
+            bootMessagesRtb.Location = new Point(
+            (this.ClientSize.Width - bootMessagesRtb.Width) / 2,
+            (this.ClientSize.Height - bootMessagesRtb.Height) / 2
+            );*/
+
+
+            float opacity = 0f;
+            Timer fadeTimer = new Timer { Interval = 30 };
+            logoSlide = new Timer { Interval = 30 };
+
+            int startX = -PictureBox2.Width; // completamente fora do ecrã
+            int targetX = (this.ClientSize.Width - PictureBox2.Width) / 2;
+            PictureBox2.Location = new Point(startX, 150); // altura cerimonial
+
             logoSlide.Tick += (object s, EventArgs e2) =>
             {
                 PictureBox2.Left += 5;
-                if (PictureBox2.Left >= 50)
+                if (PictureBox2.Left >= targetX)
                     ((Timer)s).Stop();
             };
-
 
             await Task.Delay(1000); // Dá tempo para o RichTextBox aparecer
             logoSlide.Start();
