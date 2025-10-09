@@ -5,38 +5,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
+
 namespace LifeCicles.Modules
 {
     public static class HydraThemeManager
     {
-        public static void AdaptVisual(string mood)
+        public static void AdaptVisual(Form targetForm, string mood)
         {
-
-            SplashVisual style;
-
-            Console.WriteLine($"🎨 Visual adaptado para o mood: {mood}");
-
-            // Placeholder: lógica futura para alterar cores, fontes, animações, etc.
             switch (mood)
             {
                 case "Sereno":
-                    Console.BackgroundColor = ConsoleColor.Blue;
+                    targetForm.BackColor = Color.LightBlue;
                     break;
                 case "Eufórico":
-                    Console.BackgroundColor = ConsoleColor.Red;
+                    targetForm.BackColor = Color.OrangeRed;
                     break;
                 case "Melancólico":
-                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    targetForm.BackColor = Color.Gray;
                     break;
                 case "Ritualístico":
-                    Console.BackgroundColor = ConsoleColor.Magenta;
+                    targetForm.BackColor = Color.Purple;
                     break;
                 default:
-                    Console.BackgroundColor = ConsoleColor.Black;
+                    targetForm.BackColor = Color.Black;
                     break;
             }
 
-            Console.Clear(); // aplica a cor de fundo
+            Console.WriteLine($"🎨 Visual adaptado para o mood: {mood}");
         }
+
     }
 }

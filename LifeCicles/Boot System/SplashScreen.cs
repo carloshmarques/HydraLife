@@ -2,6 +2,7 @@
 using HydraLife;
 using LifeCicles.Boot_System;
 using LifeCicles.Modules;
+using LifeCicles.Modules.Ceremony;
 using LifeCicles.Modules.Helpers;
 using LifeCicles.Modules.Lexicon;
 using LifeCicles.Modules.UI;
@@ -273,31 +274,40 @@ namespace HydraLife
             // lbl1.Text = "HydraLife is waking up...";
         }
 
+  
       
-        
+
+
+
         private async void Form1_Load(object sender, EventArgs e)
         {
-           
+            #region Modular injection
+            HydraMoodCycler.Start(this);
 
+            #endregion Modular injection
+
+            #region Normalize visuals
+            // fix control position and looks
             PictureBox2.Location = new Point(
-            (this.ClientSize.Width - PictureBox2.Width) / 2,
-            (this.ClientSize.Height - PictureBox2.Height) / 2
+                (this.ClientSize.Width - PictureBox2.Width) / 2,
+                (this.ClientSize.Height - PictureBox2.Height) / 2
             );
-
-           
-
             PictureBox2.Anchor = AnchorStyles.None;
             PictureBox2.BackColor = Color.Transparent;
             PictureBox2.BorderStyle = BorderStyle.None;
             PictureBox2.Size = new Size(200, 200); // ajusta conforme estética desejada
             PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+
+            #endregion Normalize visuals
+            #region Terminal visuals
             int terminalTop = PictureBox2.Bottom + 20;
-            int terminalFixedTop = 400; // ajusta conforme estética desejada
-            bootMessagesRtb.Size = new Size(700, 250); // ou 600, conforme estética desejada
+            int terminalFixedTop = 400;
+            bootMessagesRtb.Size = new Size(700, 250);
             bootMessagesRtb.Location = new Point(
                 (this.ClientSize.Width - bootMessagesRtb.Width) / 2,
-              terminalFixedTop
+                terminalFixedTop
             );
+            #endregion
 
 
             PictureBox2.Image = LifeCicles.Properties.Resources.hydra;
@@ -313,7 +323,7 @@ namespace HydraLife
             );*/
 
 
-            float opacity = 0f;
+            //float opacity = 0f;
             Timer fadeTimer = new Timer { Interval = 30 };
             logoSlide = new Timer { Interval = 30 };
 

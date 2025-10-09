@@ -103,6 +103,8 @@
     <Compile Include="LoginSystem\VirtualDesktopForm.Designer.cs">
       <DependentUpon>VirtualDesktopForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Ceremony\HydraMoodCycler.cs" />
+    <Compile Include="Modules\Ceremony\HydraSpirit.cs" />
     <Compile Include="Modules\Functions\ExButton.cs">
       <SubType>Component</SubType>
     </Compile>
