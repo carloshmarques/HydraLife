@@ -113,13 +113,29 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 <!-- Project tree starts here -->
 
 ```
+📁 Aboutrepo/
+│   ├── about.md
 ├── CHANGELOG.md
 ├── HydraBlueprint.md
 ├── HydraLife.sln
 ├── HydraMap.txt
 ├── LICENSE
 📁 LifeCicles/
+│   📁 AboutApp/
+│   │   ├── about.md
 │   📁 Assets/
+│   │   📁 Audio/
+│   │   │   📁 Soundwave/
+│   │   │   │   ├── Cylon Voice sample with Battle of Galactica images_008.mp4
+│   │   │   │   ├── Guns N' Roses - Patience HD_003.mp4
+│   │   │   │   ├── Imagine - John Lennon (432hz)_007.mp4
+│   │   │   │   ├── Memory_002.mp4
+│   │   │   │   ├── Pink Floyd – Time (Official Audio)_006.mp4
+│   │   │   │   ├── Queen & David Bowie - Under Pressure  live [1981] sounds better_001.mp4
+│   │   │   │   ├── The Doors： Queen Of The Highway (Lyrics)_005.mp4
+│   │   │   │   ├── The End_004.mp4
+│   │   │   │   ├── Voivod - Killing Technology_009.mp4
+│   │   │   │   ├── list.txt
 │   │   📁 Icons/
 │   │   │   ├── f50bd329929ff8f508e3983c7508b162.png
 │   │   │   ├── terminal.jpg
