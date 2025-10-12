@@ -61,7 +61,7 @@ open git bash on  a location of your chosing and type git clone https://github.c
 
 ## Sobre a aplicação
 
-Para instruções de uso, navegue até [./LifeCicles/About/about.md](LifeCicles/About/about.md) ou use o menu `About` na aplicação.
+Para instruções de uso, navegue até [./LifeCicles/AboutApp/about.md](LifeCicles/AboutApp/about.md) ou use o menu `About` na aplicação.
 
 
 ---
