@@ -34,7 +34,21 @@ Where the terminal sings, comments, and cares with empathy 💬
 Where every closure is a solemn ceremony 🌌  
 And where the digital “Self” finds its rightful place in time and space.
 
-> “Nothing remains; nothing is lost; everything transforms.” — Heraclitus & Lavoisier
+“Nothing remains; nothing is lost; everything transforms.” — Heraclitus & Lavoisier
+
+---
+
+🧭  Navegação no Site
+
+AboutApp → secção técnica por formulário ou módulo
+
+Aboutrepo → secção filosófica e mitológica
+
+HydraMap.txt → eventos emocionais e técnicos
+
+HydraBlueprint.md → arquitetura e visão futura
+
+HydraBlueprint.md → arquitetura e visão futura
 
 ---
 
@@ -43,6 +57,12 @@ And where the digital “Self” finds its rightful place in time and space.
 
 Clone or fork the repository, using git bash
 open git bash on  a location of your chosing and type git clone https://github.com/carloshmarques/HydraLife.git and edit readme.md with vscode or any other markdown editor.
+---
+
+## Sobre a aplicação
+
+Para instruções de uso, navegue até [./LifeCicles/About/about.md](LifeCicles/About/about.md) ou use o menu `About` na aplicação.
+
 
 ---
 
