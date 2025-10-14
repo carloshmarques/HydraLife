@@ -126,15 +126,21 @@ Cada evento, cada pausa, cada erro e cada revelação são registados em:
 │   📁 Assets/
 │   │   📁 Audio/
 │   │   │   📁 Soundwave/
+│   │   │   │   ├── António Variações - O corpo é que paga [Official Video]_011.mp4
+│   │   │   │   ├── Contentores_012.mp4
 │   │   │   │   ├── Cylon Voice sample with Battle of Galactica images_008.mp4
+│   │   │   │   ├── Der Ring des Nibelungen, Das Rheingold Act 1： Prelude-Part I_015.mp4
 │   │   │   │   ├── Guns N' Roses - Patience HD_003.mp4
 │   │   │   │   ├── Imagine - John Lennon (432hz)_007.mp4
 │   │   │   │   ├── Memory_002.mp4
+│   │   │   │   ├── OH THE HUMANITY!!!!!_013.mp4
 │   │   │   │   ├── Pink Floyd – Time (Official Audio)_006.mp4
 │   │   │   │   ├── Queen & David Bowie - Under Pressure  live [1981] sounds better_001.mp4
+│   │   │   │   ├── Repórter Estrábico - Disco Heavy_010.mp4
 │   │   │   │   ├── The Doors： Queen Of The Highway (Lyrics)_005.mp4
 │   │   │   │   ├── The End_004.mp4
 │   │   │   │   ├── Voivod - Killing Technology_009.mp4
+│   │   │   │   ├── Wagner - Das Rheingold - Entry of the Gods Into Valhalla_014.mp4
 │   │   │   │   ├── list.txt
 │   │   📁 Icons/
 │   │   │   ├── f50bd329929ff8f508e3983c7508b162.png
